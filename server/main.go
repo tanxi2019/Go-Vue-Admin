@@ -11,6 +11,6 @@ func main() {
 	initialize.InitRedis()           //  初始化数据库(redis)
 	initialize.InitMysql()           // 初始化数据库(mysql)
 	initialize.InitCasbinEnforcer()  // 初始化casbin策略管理器
-	initialize.InitValidate()        // 初始化Validator数据校验
+	_ = initialize.InitValidate()    // 初始化Validator数据校验
 	initialize.InitializeRunServer() // 初始化服务器
 }

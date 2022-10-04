@@ -15,7 +15,7 @@ import (
 	"strings"
 )
 
-// InitTrans validator信息翻译
+// InitValidate validator信息翻译
 func InitValidate() (err error) {
 	var Trans ut.Translator
 	//修改gin框架中的validator引擎属性, 实现定制
