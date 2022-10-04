@@ -1,0 +1,6 @@
+2022-09-07 10:24:58	PANIC	boot/casbin.go:16	server/boot.InitCasbinEnforcer	初始化Casbin失败：Error 1071: Specified key was too long; max key length is 1000 bytes
+2022-09-07 10:26:34	PANIC	boot/casbin.go:16	server/boot.InitCasbinEnforcer	初始化Casbin失败：Error 1071: Specified key was too long; max key length is 1000 bytes
+2022-09-07 10:26:40	PANIC	boot/casbin.go:16	server/boot.InitCasbinEnforcer	初始化Casbin失败：Error 1071: Specified key was too long; max key length is 1000 bytes
+2022-09-07 10:27:15	PANIC	boot/casbin.go:16	server/boot.InitCasbinEnforcer	初始化Casbin失败：Error 1071: Specified key was too long; max key length is 1000 bytes
+2022-09-07 10:28:31	PANIC	boot/casbin.go:16	server/boot.InitCasbinEnforcer	初始化Casbin失败：Error 1071: Specified key was too long; max key length is 1000 bytes
+2022-09-07 10:30:32	PANIC	boot/casbin.go:16	server/boot.InitCasbinEnforcer	初始化Casbin失败：Error 1071: Specified key was too long; max key length is 1000 bytes

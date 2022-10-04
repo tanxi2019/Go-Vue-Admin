@@ -1,0 +1,11 @@
+FROM scratch
+
+MAINTAINER "server"
+
+WORKDIR /home/server
+
+ADD . /home/server
+
+EXPOSE 8000
+
+ENTRYPOINT ["./main"]

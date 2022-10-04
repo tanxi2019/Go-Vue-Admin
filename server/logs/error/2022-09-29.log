@@ -1,0 +1,1 @@
+2022-09-29 04:35:27	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp: lookup mysql://182.61.133.217:3306: no such host

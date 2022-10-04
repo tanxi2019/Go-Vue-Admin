@@ -1,0 +1,24 @@
+2022-09-26 17:14:46	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp [::1]:3306: connectex: No connection could be made because the target machine actively refused it.
+2022-09-26 20:19:48	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:20:09	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp: lookup http://182.61.133.217:3306: no such host
+2022-09-26 20:21:39	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp: lookup http://182.61.133.217:3306: no such host
+2022-09-26 20:21:53	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:26:29	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:26:33	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:28:17	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:30:09	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:32:45	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:32:54	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:33:04	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp: lookup http://182.61.133.217:3306: no such host
+2022-09-26 20:34:50	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:36:10	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:39:35	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:45:01	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:45:06	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 20:59:01	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 21:02:10	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 21:07:31	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 21:08:16	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 21:10:14	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1130: Host '113.88.193.27' is not allowed to connect to this MySQL server
+2022-09-26 21:10:34	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp: lookup http://182.61.133.217:3306: no such host
+2022-09-26 21:11:36	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp: lookup http://182.61.133.217:3306: no such host

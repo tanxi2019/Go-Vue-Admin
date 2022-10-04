@@ -1,0 +1,1 @@
+docker run -itd --restart=always --name server -p 8000:8000 server

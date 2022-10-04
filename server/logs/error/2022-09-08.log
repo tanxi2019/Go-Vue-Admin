@@ -1,0 +1,2 @@
+2022-09-08 00:44:21	FATAL	boot/server.go:43	server/boot.InitializeRunServer.func1	listen: listen tcp 127.0.0.1:8000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+

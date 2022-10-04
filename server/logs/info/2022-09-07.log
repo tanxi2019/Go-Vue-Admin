@@ -1,0 +1,51 @@
+2022-09-07 10:24:57	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:24:57	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(127.0.0.1:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:26:34	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:26:34	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(127.0.0.1:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:26:40	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:26:40	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(127.0.0.1:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:27:15	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:27:15	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(127.0.0.1:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:28:31	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:28:31	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(127.0.0.1:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:30:32	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:30:32	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:33:03	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:33:03	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:33:03	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-07 10:33:03	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-07 10:33:03	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-07 10:33:03	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin-init]
+	当前版本 v0.0.1
+	服务当前运行在 127.0.0.1:8088/api
+	
+2022-09-07 10:53:48	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 10:54:57	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 10:56:09	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-07 10:56:09	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-07 10:56:12	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-07 10:56:12	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-07 10:56:13	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-07 10:56:13	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-07 10:56:13	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-07 10:56:13	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin-init]
+	当前版本 v0.0.1
+	服务当前运行在 127.0.0.1:8088/api
+	
+2022-09-07 10:56:33	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 10:56:58	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 10:58:04	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:00:05	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 用户不存在
+2022-09-07 11:00:24	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:06:30	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:06:33	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:06:34	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:06:49	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:08:34	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:10:30	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 11:13:25	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 用户不存在
+2022-09-07 23:25:34	DEBUG	middleware/AuthMiddleware.go:119	server/app/service/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-07 23:59:12	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-07 23:59:12	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!

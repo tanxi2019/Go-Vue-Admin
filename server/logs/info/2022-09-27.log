@@ -1,0 +1,64 @@
+2022-09-27 00:01:02	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 00:01:02	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 00:01:03	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 00:01:03	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 00:01:03	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 00:01:03	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 00:01:37	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 00:01:37	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 13:05:26	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 13:05:26	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 13:05:26	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 13:05:26	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 13:05:26	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 13:05:26	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 14:10:15	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 14:10:15	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 14:10:18	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 14:10:18	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 14:10:18	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 14:10:18	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 14:10:18	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 14:10:18	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 14:10:45	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 14:10:45	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 14:10:48	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 14:10:48	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 14:10:49	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 14:10:49	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 14:10:49	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 14:10:49	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 14:10:59	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 14:10:59	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 14:11:02	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 14:11:02	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 14:11:03	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 14:11:03	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 14:11:03	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 14:11:03	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 16:10:14	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 16:10:14	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 16:13:06	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 16:13:06	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 16:13:07	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 16:13:07	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 16:13:07	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 16:13:07	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 16:13:11	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 16:13:11	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 22:48:15	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 22:48:15	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 22:48:15	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 22:48:15	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 22:48:15	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 22:48:15	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 22:48:26	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 22:48:27	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!
+2022-09-27 23:01:25	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-09-27 23:01:25	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-09-27 23:01:25	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-09-27 23:01:25	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-27 23:01:25	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-27 23:01:25	INFO	initialize/server.go:46	server/initialize.InitializeRunServer	服务启动完成
+2022-09-27 23:01:32	INFO	initialize/server.go:55	server/initialize.InitializeRunServer	Shutting down server...
+2022-09-27 23:01:32	INFO	initialize/server.go:65	server/initialize.InitializeRunServer	Server exiting!

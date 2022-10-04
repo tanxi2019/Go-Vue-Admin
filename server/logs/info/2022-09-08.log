@@ -1,0 +1,449 @@
+2022-09-08 00:01:52	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:01:52	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:01:52	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:01:52	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:01:52	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:01:52	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin-init]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8088/api
+	
+2022-09-08 00:03:15	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:03:15	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:03:18	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:03:18	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:03:18	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:03:18	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:03:18	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:03:18	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin-init]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:03:31	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:03:31	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:03:34	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:03:34	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:03:34	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:03:34	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:03:34	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:03:34	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin-init]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:27:06	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:27:06	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:30:03	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:30:03	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:30:03	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:30:03	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:30:03	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:30:03	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin-init]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:30:39	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:30:39	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:30:50	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:30:50	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:30:50	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:30:50	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:30:50	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:30:50	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:40:03	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:40:03	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:40:10	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:40:10	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:40:10	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:40:10	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:40:10	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:40:10	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:40:11	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:40:11	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:42:55	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:42:55	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:42:55	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:42:55	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:42:55	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:42:55	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:43:04	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 00:43:04	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 00:43:07	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:43:07	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:43:07	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:43:07	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:43:07	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:43:07	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:44:13	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:44:13	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:44:13	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:44:13	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:44:13	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:44:13	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:44:20	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:44:20	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:44:20	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:44:20	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:44:20	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:44:20	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:44:21	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:44:21	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:44:21	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:44:21	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:44:21	INFO	router/router.go:43	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:44:21	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 00:59:47	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 00:59:47	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 00:59:47	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 00:59:47	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 00:59:47	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 00:59:47	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 01:09:02	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 01:09:02	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 09:53:29	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 09:53:29	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 09:53:29	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 09:53:29	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 09:53:29	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 09:53:29	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 09:54:53	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 09:54:53	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 09:55:08	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 09:55:08	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 09:55:08	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 09:55:08	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 09:55:08	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 09:55:08	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 09:55:54	DEBUG	middleware/AuthMiddleware.go:119	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 密码错误
+2022-09-08 09:58:35	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 09:58:35	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 10:00:37	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 10:00:37	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 10:00:37	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 10:00:37	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 10:00:37	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 10:00:37	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 10:21:55	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 10:21:55	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 10:22:31	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 10:22:31	INFO	boot/mysql.go:52	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 10:22:31	INFO	boot/casbin.go:21	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 10:22:31	INFO	boot/validator.go:39	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 10:22:31	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 10:22:31	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 10:22:33	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 10:22:33	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 10:38:39	INFO	boot/logger.go:106	server/boot.InitLogger	初始化zap日志完成!
+2022-09-08 10:38:39	INFO	boot/mysql.go:51	server/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 10:38:39	INFO	boot/casbin.go:20	server/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 10:38:39	INFO	boot/validator.go:38	server/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 10:38:39	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 10:38:39	INFO	boot/server.go:47	server/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 13:36:07	INFO	boot/server.go:61	server/boot.InitializeRunServer	Shutting down server...
+2022-09-08 13:36:07	INFO	boot/server.go:71	server/boot.InitializeRunServer	Server exiting!
+2022-09-08 13:36:22	INFO	boot/logger.go:106	server/global/boot.InitLogger	初始化zap日志完成!
+2022-09-08 13:36:22	INFO	boot/mysql.go:51	server/global/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 13:36:22	INFO	boot/casbin.go:20	server/global/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 13:36:22	INFO	boot/validator.go:38	server/global/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 13:36:22	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 13:36:22	INFO	boot/server.go:47	server/global/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 13:37:16	INFO	boot/server.go:61	server/global/boot.InitializeRunServer	Shutting down server...
+2022-09-08 13:37:16	INFO	boot/server.go:71	server/global/boot.InitializeRunServer	Server exiting!
+2022-09-08 13:40:36	INFO	boot/logger.go:106	server/global/boot.InitLogger	初始化zap日志完成!
+2022-09-08 13:40:36	INFO	boot/mysql.go:51	server/global/boot.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 13:40:36	INFO	boot/casbin.go:20	server/global/boot.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 13:40:36	INFO	boot/validator.go:38	server/global/boot.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 13:40:36	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 13:40:36	INFO	boot/server.go:47	server/global/boot.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 13:45:33	INFO	boot/server.go:61	server/global/boot.InitializeRunServer	Shutting down server...
+2022-09-08 13:45:33	INFO	boot/server.go:71	server/global/boot.InitializeRunServer	Server exiting!
+2022-09-08 13:45:37	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 13:45:37	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 13:45:37	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 13:45:37	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 13:45:37	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 13:45:37	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 14:14:13	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 14:14:13	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 14:14:16	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 14:14:16	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 14:14:16	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 14:14:16	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 14:14:16	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 14:14:16	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 14:16:06	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 14:16:06	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 14:16:09	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 14:16:09	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 14:16:09	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 14:16:09	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 14:16:09	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 14:16:09	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 14:17:35	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 14:17:35	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 14:18:04	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 14:18:04	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 14:18:04	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 14:18:04	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 14:18:04	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 14:18:04	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 14:18:19	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 14:18:19	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 14:44:07	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 14:44:07	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 14:44:07	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 14:44:07	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 14:44:07	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 14:44:07	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 18:40:29	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 18:40:29	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 18:44:25	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 18:44:25	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 18:44:25	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 18:44:25	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 18:44:25	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 18:44:25	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 18:45:19	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 18:45:19	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 18:56:49	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 18:56:49	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 18:56:49	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 18:56:49	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 18:56:49	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 18:56:49	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 18:57:59	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 18:57:59	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 18:58:25	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 18:58:25	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 18:58:25	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 18:58:25	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 18:58:25	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 18:58:25	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 18:59:49	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 18:59:49	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 19:00:44	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 19:00:44	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 19:00:44	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 19:00:44	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 19:00:44	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 19:00:44	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 19:00:55	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 19:00:55	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 19:02:32	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 19:02:32	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 19:02:32	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 19:02:32	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 19:02:32	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 19:02:32	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 19:02:57	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 19:02:57	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 19:08:39	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 19:08:39	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 19:08:39	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 19:08:39	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 19:08:39	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 19:08:39	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 19:10:37	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 19:10:37	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 19:27:18	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 19:27:18	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 19:27:18	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 19:27:18	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 19:27:18	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 19:27:18	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 19:27:51	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 19:27:51	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 19:29:04	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 19:29:04	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 19:29:04	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 19:29:04	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 19:29:04	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 19:29:04	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 19:29:07	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 19:29:07	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 19:42:42	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 19:42:42	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 19:42:42	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 19:42:42	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 19:42:42	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 19:42:42	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 20:20:15	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 20:20:15	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 20:20:21	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 20:20:21	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 20:20:21	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 20:20:21	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 20:20:21	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 20:20:21	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 20:24:52	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 20:24:52	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 20:24:57	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 20:24:57	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 20:24:57	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 20:24:57	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 20:24:57	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 20:24:57	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 21:03:28	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 21:03:28	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 21:52:53	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 21:52:53	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 21:52:53	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 21:52:53	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 21:52:53	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 21:52:53	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 21:54:45	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 21:54:45	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 22:09:48	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-08 22:09:48	INFO	nitialize/mysql.go:51	server/nitialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 22:09:48	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 22:09:48	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 22:09:48	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 22:09:48	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 22:18:06	INFO	nitialize/server.go:61	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-08 22:18:06	INFO	nitialize/server.go:71	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-08 22:19:07	INFO	Initialize/logger.go:106	server/Initialize.InitLogger	初始化zap日志完成!
+2022-09-08 22:19:07	INFO	Initialize/mysql.go:51	server/Initialize.InitMysql	初始化mysql数据库完成! dsn: root:******@tcp(localhost:3306)/gin_init?charset=utf8mb4&collation=utf8mb4_general_ci&parseTime=True&loc=Local&timeout=10000ms
+2022-09-08 22:19:07	INFO	Initialize/casbin.go:20	server/Initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-08 22:19:07	INFO	Initialize/validator.go:38	server/Initialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-08 22:19:07	INFO	router/router.go:44	server/app/router.InitRouter	初始化路由完成！
+2022-09-08 22:19:07	INFO	Initialize/server.go:47	server/Initialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v0.0.1
+	服务当前运行在 localhost:8000/api
+	
+2022-09-08 22:19:17	INFO	Initialize/server.go:61	server/Initialize.InitializeRunServer	Shutting down server...
+2022-09-08 22:19:17	INFO	Initialize/server.go:71	server/Initialize.InitializeRunServer	Server exiting!

@@ -1,0 +1,2 @@
+2022-09-11 22:00:26	FATAL	nitialize/server.go:43	server/nitialize.InitializeRunServer.func1	listen: listen tcp 127.0.0.1:8000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+

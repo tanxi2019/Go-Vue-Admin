@@ -1,0 +1,601 @@
+2022-09-15 09:14:00	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 09:14:00	INFO	nitialize/mysql.go:62	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 09:14:00	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 09:14:00	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 09:14:00	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 09:14:00	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 09:14:00	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:03:13	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:03:13	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:03:17	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:03:17	INFO	nitialize/mysql.go:62	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:03:17	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:03:17	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:03:17	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:03:17	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:03:17	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:04:09	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:04:09	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:04:13	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:04:13	INFO	nitialize/mysql.go:62	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:04:13	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:04:13	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:04:13	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:04:13	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:04:13	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:09:00	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:09:00	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:09:03	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:09:03	INFO	nitialize/mysql.go:62	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:09:04	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:09:04	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:09:04	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:09:04	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:09:04	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:13:55	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:13:55	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:14:57	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:14:57	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:14:57	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:14:57	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:14:57	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:14:57	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:14:57	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:15:39	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:15:39	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:15:43	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:15:43	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:15:44	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:15:44	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:15:44	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:15:44	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:15:44	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:17:17	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:17:17	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:17:20	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:17:20	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:17:21	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:17:21	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:17:21	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:17:21	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:17:21	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:20:29	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:20:29	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:20:33	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:20:33	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:20:33	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:20:33	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:20:33	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:20:33	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:20:33	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:21:11	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:21:11	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:21:15	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:21:15	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:21:15	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:21:15	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:21:16	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:21:16	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:21:16	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:23:49	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:23:49	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:23:54	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:23:54	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:23:54	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:23:54	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:23:54	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:23:54	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:23:54	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:24:41	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:24:41	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:24:44	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:24:44	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:24:44	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:24:44	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:24:44	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:24:44	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:24:44	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:26:31	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:26:31	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:26:35	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:26:35	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:26:35	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:26:35	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:26:35	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:26:35	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:26:35	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:27:46	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:27:46	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:28:04	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:28:04	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:28:04	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:28:04	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:28:04	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:28:04	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:28:04	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:29:26	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:29:26	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:29:30	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:29:30	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:29:30	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:29:30	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:29:30	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:29:30	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:29:30	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:32:02	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:32:02	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:32:07	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:32:07	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:32:07	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:32:07	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:32:07	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:32:07	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:32:07	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:32:33	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:32:33	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:32:36	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:32:36	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:32:36	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:32:36	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:32:36	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:32:36	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:32:36	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:34:32	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:34:32	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:34:38	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:34:38	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:34:38	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:34:38	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:34:38	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:34:38	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:34:38	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:40:10	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:40:10	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:40:15	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:40:15	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:40:15	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:40:15	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:40:15	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:40:15	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:40:15	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:41:07	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:41:07	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:41:10	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:41:10	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:41:10	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:41:10	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:41:10	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:41:10	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:41:10	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:44:53	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:44:53	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:44:57	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:44:57	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:44:58	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:44:58	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:44:58	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:44:58	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:44:58	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 12:46:30	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 12:46:30	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 12:46:33	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 12:46:33	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 12:46:33	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 12:46:33	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 12:46:33	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 12:46:33	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 12:46:33	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 15:34:03	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 15:34:03	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 15:34:07	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 15:34:07	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 15:34:07	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 15:34:07	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 15:34:07	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 15:34:07	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 15:34:07	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 15:36:50	DEBUG	middleware/auth.go:119	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: Token is expired
+2022-09-15 15:36:52	DEBUG	middleware/auth.go:119	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: Token is expired
+2022-09-15 15:36:53	DEBUG	middleware/auth.go:119	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: Token is expired
+2022-09-15 15:37:02	DEBUG	middleware/auth.go:119	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: Token is expired
+2022-09-15 15:42:31	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 15:42:31	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 15:42:35	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 15:42:35	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 15:42:36	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 15:42:36	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 15:42:36	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 15:42:36	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 15:42:36	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 15:51:27	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 15:51:27	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 15:51:32	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 15:51:32	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 15:51:32	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 15:51:32	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 15:51:32	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 15:51:32	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 15:51:32	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 15:56:56	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 15:56:56	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 15:57:00	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 15:57:00	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 15:57:00	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 15:57:00	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 15:57:00	INFO	nitialize/validator.go:37	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 15:57:00	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 15:57:00	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 15:58:47	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 15:58:47	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 15:58:51	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 15:58:51	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 15:58:51	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 15:58:52	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 15:58:52	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 15:58:52	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 15:58:52	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	{#Welcome} [go-admin]
+	{#CurrentVer} v1.0.0
+	{#ServerLog} localhost:8000/api
+	
+2022-09-15 16:01:23	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:01:23	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:01:26	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:01:26	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:01:26	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:01:26	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:01:26	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:01:27	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:01:27	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:08:26	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:08:26	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:08:30	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:08:30	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:08:31	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:08:31	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:08:31	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:08:31	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:08:31	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:09:51	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:09:51	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:09:55	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:09:55	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:09:55	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:09:55	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:09:55	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:09:55	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:09:55	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	{#Welcome} [go-admin]
+	{#CurrentVer} v1.0.0
+	{#ServerLog} localhost:8000/api
+	
+2022-09-15 16:10:12	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:10:12	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:10:15	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:10:15	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:10:15	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:10:15	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:10:15	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:10:15	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:10:15	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	welcome [go-admin]
+	current version v1.0.0
+	Server is running at localhost:8000/api
+	
+2022-09-15 16:11:00	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:11:00	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:11:03	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:11:03	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:11:04	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:11:04	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:11:04	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:11:04	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:11:04	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:11:14	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:11:14	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:11:18	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:11:18	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:11:18	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:11:18	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:11:18	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:11:18	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:11:18	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:12:42	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:12:42	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:12:45	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:12:46	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:12:46	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:12:46	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:12:46	INFO	nitialize/validator.go:53	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:12:46	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:12:46	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:17:56	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:17:56	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:18:09	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:18:09	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:18:09	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:18:09	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:18:09	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:18:09	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:18:09	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:20:55	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:20:55	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:21:11	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:21:11	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:21:11	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:21:12	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:21:12	INFO	nitialize/validator.go:52	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:21:12	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:21:12	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 16:31:19	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 16:31:19	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 16:31:22	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 16:31:22	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 16:31:22	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 16:31:22	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 16:31:22	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 16:31:22	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 16:31:22	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:20:33	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:20:33	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:20:37	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:20:37	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:20:37	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:20:37	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:20:48	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:20:48	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:20:49	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:20:49	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:21:15	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:21:15	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:21:16	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:21:16	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:21:29	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:21:29	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:21:29	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:21:29	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:21:29	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:21:29	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:21:29	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:22:10	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:22:10	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:22:14	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:22:15	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:22:15	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:22:15	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:22:15	INFO	nitialize/validator.go:40	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:22:15	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:22:15	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:26:30	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:26:30	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:26:34	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:26:34	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:26:34	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:26:34	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:26:34	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:26:34	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:26:34	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:26:45	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:26:45	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:26:48	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:26:48	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:26:49	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:26:49	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:26:49	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:26:49	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:26:49	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:33:03	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:33:03	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:33:06	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:33:06	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:33:07	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:33:07	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:33:07	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:33:07	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:33:07	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:34:16	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:34:16	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:34:28	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:34:28	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:34:28	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:34:28	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:34:28	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:34:28	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:34:28	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 20:35:02	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 20:35:02	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 20:35:06	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 20:35:06	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 20:35:06	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 20:35:06	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 20:35:06	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 20:35:07	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 20:35:07	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 21:07:06	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 21:07:06	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 21:07:10	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 21:07:10	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 21:07:10	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 21:07:10	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 21:07:10	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 21:07:10	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 21:07:10	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 21:07:26	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 21:07:26	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
+2022-09-15 21:07:29	INFO	nitialize/logger.go:106	server/nitialize.InitLogger	初始化zap日志完成!
+2022-09-15 21:07:29	INFO	nitialize/mysql.go:63	server/nitialize.InitMysql	初始化mysql数据库完成!
+2022-09-15 21:07:30	INFO	nitialize/redis.go:21	server/nitialize.InitRedis	初始化redis数据库完成!
+2022-09-15 21:07:30	INFO	nitialize/casbin.go:20	server/nitialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-09-15 21:07:30	INFO	nitialize/validator.go:38	server/nitialize.InitValidate	初始化validator.v10数据校验器完成
+2022-09-15 21:07:30	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-09-15 21:07:30	INFO	nitialize/server.go:47	server/nitialize.InitializeRunServer	
+	欢迎使用 [go-admin]
+	当前版本 v1.0.0
+	服务当前运行在 localhost:8000/api
+	
+2022-09-15 21:53:24	INFO	nitialize/server.go:60	server/nitialize.InitializeRunServer	Shutting down server...
+2022-09-15 21:53:24	INFO	nitialize/server.go:70	server/nitialize.InitializeRunServer	Server exiting!
