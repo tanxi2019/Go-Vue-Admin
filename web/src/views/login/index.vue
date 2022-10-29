@@ -41,13 +41,27 @@
           </span>
         </el-form-item>
       </el-tooltip>
+
+      <el-form-item prop="code">
+        <el-input
+          v-model="loginForm.code"
+          auto-complete="off"
+          placeholder="验证码"
+          style="width: 60%"
+        >
+          <svg-icon slot="prefix" icon-class="validCode" class="el-input__icon input-icon" />
+        </el-input>
+        <div class="login-code">
+          <img :src="captcha" class="login-code-img" @click="verifyCaptcha">
+        </div>
+      </el-form-item>
       <el-button :loading="loading" type="primary" class="login-btn" @click.native.prevent="handleLogin">登录</el-button>
     </el-form>
   </div>
 </template>
 
 <script>
-
+import { captcha } from '@/api/system/base'
 export default {
   name: 'Login',
   data() {
@@ -61,11 +75,15 @@ export default {
     return {
       loginForm: {
         username: 'admin',
-        password: '123456'
+        password: '123456',
+        code: '',
+        captchaId: ''
       },
+      captcha: '',
       loginRules: {
-        username: [{ required: true, message:"用户名不能为空", trigger: 'blur' }],
-        password: [{ required: true, trigger: 'blur', validator: validatePassword }]
+        username: [{ required: true, message: '用户名不能为空', trigger: 'blur' }],
+        password: [{ required: true, trigger: 'blur', validator: validatePassword }],
+        code: [{ required: true, message: '验证码不能为空', trigger: 'blur' }]
       },
       passwordType: 'password',
       capsTooltip: false,
@@ -87,7 +105,8 @@ export default {
     }
   },
   created() {
-    // window.addEventListener('storage', this.afterQRScan)
+    // window.addEventListener('storage', this.afterQRScan)\
+    this.verifyCaptcha()
   },
   mounted() {
     if (this.loginForm.username === '') {
@@ -139,6 +158,12 @@ export default {
         }
         return acc
       }, {})
+    },
+    // eslint-disable-next-line vue/no-dupe-keys
+    verifyCaptcha: async function() {
+      const data = await captcha()
+      this.captcha = data.data.picPath
+      this.loginForm.captchaId = data.data.captchaId
     }
   }
 }
@@ -182,7 +207,7 @@ export default {
 }
 .login-code {
   width: 33%;
-  height: 38px;
+  height: 40px;
   float: right;
   img {
     cursor: pointer;
@@ -201,7 +226,9 @@ export default {
   letter-spacing: 1px;
 }
 .login-code-img {
-  height: 38px;
+  height: 36px;
+  border-radius: 2px;
+  border: 1px #DCDFE6 solid;
 }
 .register-link {
   font-size: 14px;

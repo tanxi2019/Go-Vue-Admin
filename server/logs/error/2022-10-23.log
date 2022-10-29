@@ -1,0 +1,11 @@
+2022-10-23 11:47:46	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp [::1]:3306: connectex: No connection could be made because the target machine actively refused it.
+2022-10-23 11:49:28	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp [::1]:3306: connectex: No connection could be made because the target machine actively refused it.
+2022-10-23 11:50:43	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp 82.61.133.217:3306: i/o timeout
+2022-10-23 11:51:41	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: commands out of sync. You can't run this command now
+2022-10-23 11:53:02	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp 182.61.133.217:3306: i/o timeout
+2022-10-23 11:53:56	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp 182.61.133.217:3306: connectex: A socket operation was attempted to an unreachable host.
+2022-10-23 11:58:07	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1049: Unknown database 'gin-vue-admin'
+2022-10-23 11:59:30	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1049: Unknown database 'gin-vue-admin'
+2022-10-23 14:09:44	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: driver: bad connection
+2022-10-23 14:11:01	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: commands out of sync. You can't run this command now
+2022-10-23 14:12:34	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp 182.61.133.217:3306: connectex: A socket operation was attempted to an unreachable host.

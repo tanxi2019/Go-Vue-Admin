@@ -27,9 +27,7 @@ type DictDetailsApiService struct {
 
 // NewDictDetailsApi 构造函数
 func NewDictDetailsApi() DictDetailsService {
-	dictDetails := service.NewDictDetailsService()
-	dictDetailsApiService := DictDetailsApiService{DictDetails: dictDetails}
-	return dictDetailsApiService
+	return DictDetailsApiService{DictDetails: service.NewDictDetailsService()}
 }
 
 // PostDictDetails 创建

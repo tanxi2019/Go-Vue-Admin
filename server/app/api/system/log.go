@@ -3,7 +3,7 @@ package system
 import (
 	"net/http"
 	"server/app/model/system/reqo"
-	"server/app/service/system"
+	service "server/app/service/system"
 	"server/pkg/code"
 	"server/pkg/response"
 	"server/pkg/validator"
@@ -16,18 +16,16 @@ type LogApi interface {
 	BatchDeleteOperationLogByIds(c *gin.Context) //批量删除操作日志
 }
 
-type LogService struct {
-	Log system.LogService
+type LogApiService struct {
+	Log service.LogService
 }
 
 func NewLogApi() LogApi {
-	log := system.NewLogService()
-	logService := LogService{Log: log}
-	return logService
+	return LogApiService{Log: service.NewLogService()}
 }
 
 // GetOperationLogs 获取操作日志列表
-func (ls LogService) GetOperationLogs(c *gin.Context) {
+func (ls LogApiService) GetOperationLogs(c *gin.Context) {
 	var req reqo.OperationLogListRequest
 	// 绑定参数
 	if err := c.ShouldBind(&req); err != nil {
@@ -51,7 +49,7 @@ func (ls LogService) GetOperationLogs(c *gin.Context) {
 }
 
 // BatchDeleteOperationLogByIds 批量删除操作日志
-func (ls LogService) BatchDeleteOperationLogByIds(c *gin.Context) {
+func (ls LogApiService) BatchDeleteOperationLogByIds(c *gin.Context) {
 	var req reqo.DeleteOperationLogRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {

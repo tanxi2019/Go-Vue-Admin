@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"server/app/model/system"
 	"server/app/model/system/reqo"
+	redis "server/cache"
 	"server/global"
 	"server/pkg/bcrypt"
 	"strings"
@@ -16,8 +17,8 @@ import (
 )
 
 type UserService interface {
-	Login(user *system.User) (*system.User, error)     // 登录
-	ChangePwd(username string, newPasswd string) error // 更新密码
+	Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) // 登录
+	ChangePwd(username string, newPasswd string) error              // 更新密码
 
 	CreateUser(user *system.User) error                                // 创建用户
 	GetUserById(id uint) (system.User, error)                          // 获取单个用户
@@ -34,8 +35,7 @@ type UserService interface {
 	ClearUserInfoCache()                                // 清理所有用户信息缓存
 }
 
-type User struct {
-}
+type User struct{}
 
 // 当前用户信息缓存，避免频繁获取数据库
 var userInfoCache = cache.New(24*time.Hour, 48*time.Hour)
@@ -46,7 +46,8 @@ func NewUserService() UserService {
 }
 
 // Login 登录
-func (ud User) Login(user *system.User) (*system.User, error) {
+func (ud User) Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) {
+	fmt.Println(user.Username)
 	// 根据用户名获取用户(正常状态:用户状态正常)
 	var firstUser system.User
 	err := global.DB.
@@ -82,6 +83,15 @@ func (ud User) Login(user *system.User) (*system.User, error) {
 	err = bcrypt.ComparePasswd(firstUser.Password, user.Password)
 	if err != nil {
 		return &firstUser, errors.New("密码错误")
+	}
+	// 获取 redis数字验证码
+	CaptchaCache := redis.NewCaptchaService()
+	captcha := CaptchaCache.GetCaptcha(user.CaptchaId)
+	if captcha == "" {
+		return nil, errors.New("验证码过期")
+	}
+	if user.Code != captcha {
+		return nil, errors.New("验证码错误")
 	}
 	return &firstUser, nil
 }

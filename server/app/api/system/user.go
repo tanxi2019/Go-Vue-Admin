@@ -26,19 +26,17 @@ type UserApi interface {
 }
 
 // UserService 服务层数据处理
-type UserService struct {
+type UserApiService struct {
 	User service.UserService
 }
 
 // NewUserApi 构造函数
 func NewUserApi() UserApi {
-	user := service.NewUserService()
-	userService := UserService{User: user}
-	return userService
+	return UserApiService{User: service.NewUserService()}
 }
 
 // GetUserInfo 获取当前登录用户信息
-func (us UserService) GetUserInfo(c *gin.Context) {
+func (us UserApiService) GetUserInfo(c *gin.Context) {
 	user, err := us.User.GetCurrentUser(c)
 	if err != nil {
 		// 错误返回
@@ -55,7 +53,7 @@ func (us UserService) GetUserInfo(c *gin.Context) {
 }
 
 // GetUsers 获取用户列表
-func (us UserService) GetUsers(c *gin.Context) {
+func (us UserApiService) GetUsers(c *gin.Context) {
 	var req reqo.UserListRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -79,7 +77,7 @@ func (us UserService) GetUsers(c *gin.Context) {
 }
 
 // ChangePwd 更新用户登录密码
-func (us UserService) ChangePwd(c *gin.Context) {
+func (us UserApiService) ChangePwd(c *gin.Context) {
 	var req reqo.ChangePwdRequest
 
 	// 参数绑定
@@ -118,7 +116,7 @@ func (us UserService) ChangePwd(c *gin.Context) {
 }
 
 // CreateUser 创建用户
-func (us UserService) CreateUser(c *gin.Context) {
+func (us UserApiService) CreateUser(c *gin.Context) {
 	var req reqo.CreateUserRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -200,7 +198,7 @@ func (us UserService) CreateUser(c *gin.Context) {
 }
 
 // UpdateUserById 更新用户
-func (us UserService) UpdateUserById(c *gin.Context) {
+func (us UserApiService) UpdateUserById(c *gin.Context) {
 	var req reqo.CreateUserRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -351,7 +349,7 @@ func (us UserService) UpdateUserById(c *gin.Context) {
 }
 
 // BatchDeleteUserByIds 批量删除用户
-func (us UserService) BatchDeleteUserByIds(c *gin.Context) {
+func (us UserApiService) BatchDeleteUserByIds(c *gin.Context) {
 	var req reqo.DeleteUserRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {

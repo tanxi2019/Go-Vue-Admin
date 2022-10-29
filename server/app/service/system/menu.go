@@ -1,7 +1,6 @@
 package system
 
 import (
-	"fmt"
 	"github.com/thoas/go-funk"
 	"gorm.io/gorm"
 	"server/app/model/system"
@@ -19,8 +18,7 @@ type MenuService interface {
 	GetUserMenuTreeByUserId(userId uint) ([]*system.Menu, error) // 根据用户ID获取用户的权限(可访问)菜单树
 }
 
-type Menu struct {
-}
+type Menu struct{}
 
 func NewMenuService() MenuService {
 	return Menu{}
@@ -62,7 +60,6 @@ func (m Menu) CreateMenu(menu *system.Menu) error {
 
 // UpdateMenuById 更新菜单
 func (m Menu) UpdateMenuById(menuId uint, menu *system.Menu) error {
-	fmt.Println(menuId)
 	err := global.DB.Model(menu).Where("id = ?", menuId).Updates(menu).Error
 	return err
 }

@@ -22,8 +22,7 @@ type ApiService interface {
 	GetApiDescByPath(path string, method string) (string, error)    // 根据接口路径和请求方式获取接口描述
 }
 
-type Api struct {
-}
+type Api struct{}
 
 func NewApiService() ApiService {
 	return Api{}

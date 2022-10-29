@@ -33,7 +33,7 @@ mysql:
   password: 123456
   # 数据库名
   database: gin-vue-admin
-  # 主机地址
+  # 主机地址 182.61.133.217
   host: 182.61.133.217
   # 端口
   port: 3306
@@ -47,7 +47,7 @@ mysql:
   collation: utf8mb4_general_ci
 
 redis:
-    # 密码
+    # 密码 123456
     password: 123456
     # 数据库名
     database: 0

@@ -27,18 +27,16 @@ type RoleApi interface {
 	BatchDeleteRoleByIds(c *gin.Context) // 批量删除角色
 }
 
-type RoleService struct {
+type RoleApiService struct {
 	Role service.RoleService
 }
 
 func NewRoleApi() RoleApi {
-	role := service.NewRoleService()
-	roleService := RoleService{Role: role}
-	return roleService
+	return RoleApiService{Role: service.NewRoleService()}
 }
 
 // GetRoles 获取角色列表
-func (rs RoleService) GetRoles(c *gin.Context) {
+func (rs RoleApiService) GetRoles(c *gin.Context) {
 	var req reqo.RoleListRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -63,7 +61,7 @@ func (rs RoleService) GetRoles(c *gin.Context) {
 }
 
 // CreateRole 创建角色
-func (rs RoleService) CreateRole(c *gin.Context) {
+func (rs RoleApiService) CreateRole(c *gin.Context) {
 	var req reqo.CreateRoleRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -111,7 +109,7 @@ func (rs RoleService) CreateRole(c *gin.Context) {
 }
 
 // UpdateRoleById 更新角色
-func (rs RoleService) UpdateRoleById(c *gin.Context) {
+func (rs RoleApiService) UpdateRoleById(c *gin.Context) {
 	var req reqo.CreateRoleRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -232,7 +230,7 @@ func (rs RoleService) UpdateRoleById(c *gin.Context) {
 }
 
 // GetRoleMenusById 获取角色的权限菜单
-func (rs RoleService) GetRoleMenusById(c *gin.Context) {
+func (rs RoleApiService) GetRoleMenusById(c *gin.Context) {
 	// 获取path中的roleId
 	roleId, _ := strconv.Atoi(c.Param("roleId"))
 	if roleId <= 0 {
@@ -254,7 +252,7 @@ func (rs RoleService) GetRoleMenusById(c *gin.Context) {
 }
 
 // UpdateRoleMenusById 更新角色的权限菜单
-func (rs RoleService) UpdateRoleMenusById(c *gin.Context) {
+func (rs RoleApiService) UpdateRoleMenusById(c *gin.Context) {
 	var req reqo.UpdateRoleMenusRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -372,7 +370,7 @@ func (rs RoleService) UpdateRoleMenusById(c *gin.Context) {
 }
 
 // GetRoleApisById 获取角色的权限接口
-func (rs RoleService) GetRoleApisById(c *gin.Context) {
+func (rs RoleApiService) GetRoleApisById(c *gin.Context) {
 	// 获取path中的roleId
 	roleId, _ := strconv.Atoi(c.Param("roleId"))
 	if roleId <= 0 {
@@ -408,7 +406,7 @@ func (rs RoleService) GetRoleApisById(c *gin.Context) {
 }
 
 // UpdateRoleApisById 更新角色的权限接口
-func (rs RoleService) UpdateRoleApisById(c *gin.Context) {
+func (rs RoleApiService) UpdateRoleApisById(c *gin.Context) {
 	var req reqo.UpdateRoleApisRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -510,7 +508,7 @@ func (rs RoleService) UpdateRoleApisById(c *gin.Context) {
 }
 
 // BatchDeleteRoleByIds 批量删除角色
-func (rs RoleService) BatchDeleteRoleByIds(c *gin.Context) {
+func (rs RoleApiService) BatchDeleteRoleByIds(c *gin.Context) {
 	var req reqo.DeleteRoleRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {

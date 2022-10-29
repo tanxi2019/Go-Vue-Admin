@@ -16,19 +16,20 @@ type Example struct {
 	Age         int       `json:"age" `
 	Sex         int       `json:"sex"  `
 	Mobile      string    `json:"mobile"  `
-	Count       uint      `json:"count"  `
+	Count       int       `json:"count"  `
 	Description string    `json:"description"`
 }
 
 // BuildExample 序列化
 func BuildExample(item *example.Example) Example {
+	ExampleCache := cache.NewExampleService()
 	return Example{
 		ID:          item.ID,
 		Name:        item.Name,
 		Sex:         item.Sex,
 		Age:         item.Age,
 		Mobile:      item.Mobile,
-		Count:       uint(cache.GetExampleCountCache(uint64(item.ID))), // 点击数
+		Count:       int(ExampleCache.GetExampleCountCache(uint64(item.ID))), // 点击数
 		Description: item.Description,
 		CreatedAt:   item.CreatedAt,
 		UpdatedAt:   item.UpdatedAt,

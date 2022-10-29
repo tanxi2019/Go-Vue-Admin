@@ -21,8 +21,10 @@ require (
 	github.com/qiniu/api.v7/v7 v7.8.2
 	github.com/spf13/viper v1.10.1
 	github.com/thoas/go-funk v0.9.1
+	github.com/wenlng/go-captcha v1.2.5
 	go.uber.org/zap v1.19.1
 	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3
+	golang.org/x/text v0.3.7
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gorm.io/driver/mysql v1.2.1
 	gorm.io/gorm v1.22.4

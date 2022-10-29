@@ -21,8 +21,7 @@ type RoleService interface {
 	BatchDeleteRoleByIds(roleIds []uint) error                           // 删除角色
 }
 
-type Role struct {
-}
+type Role struct{}
 
 func NewRoleService() RoleService {
 	return Role{}
@@ -97,7 +96,6 @@ func (rd Role) UpdateRoleMenus(role *system.Role) error {
 // GetRoleApisByRoleKeyword 根据角色关键字获取角色的权限接口
 func (rd Role) GetRoleApisByRoleKeyword(roleKeyword string) ([]*system.Api, error) {
 	policies := global.CasbinEnforcer.GetFilteredPolicy(0, roleKeyword)
-
 	// 获取所有接口
 	var apis []*system.Api
 	err := global.DB.Find(&apis).Error
@@ -137,6 +135,7 @@ func (rd Role) UpdateRoleApis(roleKeyword string, reqRolePolicies [][]string) er
 		}
 	}
 	isAdded, _ := global.CasbinEnforcer.AddPolicies(reqRolePolicies)
+	fmt.Println(isAdded)
 	if !isAdded {
 		return errors.New("更新角色的权限接口失败")
 	}

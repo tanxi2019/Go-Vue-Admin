@@ -1,7 +1,6 @@
 package middleware
 
 import (
-	"fmt"
 	"net/http"
 	"server/app/model/system"
 	"server/app/model/system/reqo"
@@ -74,18 +73,13 @@ func login(c *gin.Context) (interface{}, error) {
 	if err := c.ShouldBind(&req); err != nil {
 		return "", err
 	}
-
-	u := &system.User{
-		Username: req.Username,
-		Password: req.Password,
-	}
-
 	// 密码校验
 	userDao := service.NewUserService()
-	user, err := userDao.Login(u)
+	user, err := userDao.Login(&req)
 	if err != nil {
 		return nil, err
 	}
+
 	// 将用户以json格式写入, payloadFunc/authorizator会使用到
 	if userstr, err := json.Struct2Json(user); err != nil {
 		global.Log.Errorw("struct2json error: ", err)
@@ -119,7 +113,7 @@ func authorizator(data interface{}, c *gin.Context) bool {
 func unauthorized(c *gin.Context, code int, message string) {
 	global.Log.Debugf("JWT认证失败, 错误码: %d, 错误信息: %s", code, message)
 	// 错误返回
-	response.Error(c, http.StatusBadRequest, 10010, fmt.Sprintf("JWT认证失败, 错误码: %d, 错误信息: %s", code, message), nil)
+	response.Error(c, http.StatusBadRequest, 10010, message, nil)
 	return
 }
 

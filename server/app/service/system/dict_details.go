@@ -15,8 +15,7 @@ type DictDetailsService interface {
 	PutDictDetails(dictDetail *system.DictDetail) error                                                   // 更新
 }
 
-type DictDetails struct {
-}
+type DictDetails struct{}
 
 // NewDictDetailsService 构造函数
 func NewDictDetailsService() DictDetailsService {

@@ -1,0 +1,2 @@
+2022-10-15 16:29:56	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-10-15 16:30:05	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!

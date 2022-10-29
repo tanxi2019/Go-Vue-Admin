@@ -14,8 +14,7 @@ type LogService interface {
 	SaveOperationLogChannel(olc <-chan *system.OperationLog) //处理OperationLogChan将日志记录到数据库
 }
 
-type Log struct {
-}
+type Log struct{}
 
 func NewLogService() LogService {
 	return Log{}

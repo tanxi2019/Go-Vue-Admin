@@ -13,7 +13,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type ApiApi interface {
+type ApiService interface {
 	GetApis(c *gin.Context)             // 获取接口列表
 	GetApiTree(c *gin.Context)          // 获取接口树(按接口Category字段分类)
 	CreateApi(c *gin.Context)           // 创建接口
@@ -21,18 +21,16 @@ type ApiApi interface {
 	BatchDeleteApiByIds(c *gin.Context) // 批量删除接口
 }
 
-type ApiService struct {
+type ApiApiService struct {
 	Api service.ApiService
 }
 
-func NewApiApi() ApiApi {
-	api := service.NewApiService()
-	apiService := ApiService{Api: api}
-	return apiService
+func NewApiApi() ApiService {
+	return ApiApiService{Api: service.NewApiService()}
 }
 
 // GetApis 获取接口列表
-func (as ApiService) GetApis(c *gin.Context) {
+func (as ApiApiService) GetApis(c *gin.Context) {
 	var req reqo.ApiListRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -56,7 +54,7 @@ func (as ApiService) GetApis(c *gin.Context) {
 }
 
 // GetApiTree 获取接口树(按接口Category字段分类)
-func (as ApiService) GetApiTree(c *gin.Context) {
+func (as ApiApiService) GetApiTree(c *gin.Context) {
 	tree, err := as.Api.GetApiTree()
 	if err != nil {
 		// 错误返回
@@ -72,7 +70,7 @@ func (as ApiService) GetApiTree(c *gin.Context) {
 }
 
 // CreateApi 创建接口
-func (as ApiService) CreateApi(c *gin.Context) {
+func (as ApiApiService) CreateApi(c *gin.Context) {
 	var req reqo.CreateApiRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -110,7 +108,7 @@ func (as ApiService) CreateApi(c *gin.Context) {
 }
 
 // UpdateApiById 更新接口
-func (as ApiService) UpdateApiById(c *gin.Context) {
+func (as ApiApiService) UpdateApiById(c *gin.Context) {
 	var req reqo.UpdateApiRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -157,7 +155,7 @@ func (as ApiService) UpdateApiById(c *gin.Context) {
 }
 
 // BatchDeleteApiByIds 批量删除接口
-func (as ApiService) BatchDeleteApiByIds(c *gin.Context) {
+func (as ApiApiService) BatchDeleteApiByIds(c *gin.Context) {
 	var req reqo.DeleteApiRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {

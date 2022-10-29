@@ -14,28 +14,25 @@ import (
 )
 
 type MenuApi interface {
-	GetMenus(c *gin.Context)             // 获取菜单列表
-	GetMenuTree(c *gin.Context)          // 获取菜单树
-	CreateMenu(c *gin.Context)           // 创建菜单
-	UpdateMenuById(c *gin.Context)       // 更新菜单
-	BatchDeleteMenuByIds(c *gin.Context) // 批量删除菜单
-
+	GetMenus(c *gin.Context)                // 获取菜单列表
+	GetMenuTree(c *gin.Context)             // 获取菜单树
+	CreateMenu(c *gin.Context)              // 创建菜单
+	UpdateMenuById(c *gin.Context)          // 更新菜单
+	BatchDeleteMenuByIds(c *gin.Context)    // 批量删除菜单
 	GetUserMenusByUserId(c *gin.Context)    // 获取用户的可访问菜单列表
 	GetUserMenuTreeByUserId(c *gin.Context) // 获取用户的可访问菜单树
 }
 
-type MenuService struct {
+type MenuApiService struct {
 	Menu service.MenuService
 }
 
 func NewMenuMenuApi() MenuApi {
-	menu := service.NewMenuService()
-	menuService := MenuService{Menu: menu}
-	return menuService
+	return MenuApiService{Menu: service.NewMenuService()}
 }
 
 // 获取菜单列表
-func (ms MenuService) GetMenus(c *gin.Context) {
+func (ms MenuApiService) GetMenus(c *gin.Context) {
 	menus, err := ms.Menu.GetMenus()
 	if err != nil {
 		// 错误返回
@@ -51,7 +48,7 @@ func (ms MenuService) GetMenus(c *gin.Context) {
 }
 
 // 获取菜单树
-func (ms MenuService) GetMenuTree(c *gin.Context) {
+func (ms MenuApiService) GetMenuTree(c *gin.Context) {
 	menuTree, err := ms.Menu.GetMenuTree()
 	if err != nil {
 		// 错误返回
@@ -66,7 +63,7 @@ func (ms MenuService) GetMenuTree(c *gin.Context) {
 }
 
 // 创建菜单
-func (ms MenuService) CreateMenu(c *gin.Context) {
+func (ms MenuApiService) CreateMenu(c *gin.Context) {
 	var req reqo.CreateMenuRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -114,7 +111,7 @@ func (ms MenuService) CreateMenu(c *gin.Context) {
 }
 
 // 更新菜单
-func (ms MenuService) UpdateMenuById(c *gin.Context) {
+func (ms MenuApiService) UpdateMenuById(c *gin.Context) {
 	var req reqo.UpdateMenuRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -172,7 +169,7 @@ func (ms MenuService) UpdateMenuById(c *gin.Context) {
 }
 
 // 批量删除菜单
-func (ms MenuService) BatchDeleteMenuByIds(c *gin.Context) {
+func (ms MenuApiService) BatchDeleteMenuByIds(c *gin.Context) {
 	var req reqo.DeleteMenuRequest
 	// 参数绑定
 	if err := c.ShouldBind(&req); err != nil {
@@ -194,7 +191,7 @@ func (ms MenuService) BatchDeleteMenuByIds(c *gin.Context) {
 }
 
 // 根据用户ID获取用户的可访问菜单列表
-func (ms MenuService) GetUserMenusByUserId(c *gin.Context) {
+func (ms MenuApiService) GetUserMenusByUserId(c *gin.Context) {
 	// 获取路径中的userId
 	userId, _ := strconv.Atoi(c.Param("userId"))
 	if userId <= 0 {
@@ -217,7 +214,7 @@ func (ms MenuService) GetUserMenusByUserId(c *gin.Context) {
 }
 
 // 根据用户ID获取用户的可访问菜单树
-func (ms MenuService) GetUserMenuTreeByUserId(c *gin.Context) {
+func (ms MenuApiService) GetUserMenuTreeByUserId(c *gin.Context) {
 	// 获取路径中的userId
 	userId, _ := strconv.Atoi(c.Param("userId"))
 	if userId <= 0 {

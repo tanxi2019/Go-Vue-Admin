@@ -93,7 +93,7 @@
       <el-dialog title="修改权限" :visible.sync="permsDialogVisible" width="580px" custom-class="perms-dialog">
         <el-tabs>
           <el-tab-pane>
-            <span slot="label"> 角色菜单</span>
+            <span slot="label"> 菜单权限</span>
             <el-tree
               ref="roleMenuTree"
               :props="{children: 'children',label: 'title'}"
@@ -106,7 +106,7 @@
           </el-tab-pane>
 
           <el-tab-pane>
-            <span slot="label"> 角色接口</span>
+            <span slot="label">数据权限</span>
             <el-tree
               ref="roleApiTree"
               :props="{children: 'children',label: 'desc'}"

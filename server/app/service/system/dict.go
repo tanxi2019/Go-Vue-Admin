@@ -15,8 +15,7 @@ type DictService interface {
 	PutDict(dict *system.Dict) error                                                   // 更新
 }
 
-type Dict struct {
-}
+type Dict struct{}
 
 // NewDictService 构造函数
 func NewDictService() DictService {
