@@ -10,21 +10,15 @@ import (
 )
 
 var (
-	// DB 全局mysql数据库变量
-	DB *gorm.DB
+	DB *gorm.DB // DB 全局mysql数据库变量
 
-	// Redis全局redis数据库变量
-	Redis *redis.Client
+	Redis *redis.Client // Redis全局redis数据库变量
 
-	// CasbinEnforcer 全局CasbinEnforcer
-	CasbinEnforcer *casbin.Enforcer
+	CasbinEnforcer *casbin.Enforcer // CasbinEnforcer 全局CasbinEnforcer
 
-	// Log 全局日志变量
-	Log *zap.SugaredLogger
+	Log *zap.SugaredLogger // Log 全局日志变量
 
-	// Trans 全局validate翻译器
-	Trans ut.Translator
+	Trans ut.Translator // Trans 全局validate翻译器
 
-	// AuthMiddleware jwt auth认证
-	AuthMiddleware *jwt.GinJWTMiddleware
+	AuthMiddleware *jwt.GinJWTMiddleware // AuthMiddleware jwt auth认证
 )

@@ -3,16 +3,18 @@ package example
 import (
 	"github.com/gin-gonic/gin"
 	"server/app/api/example"
+	"server/global"
+	"server/middleware"
 )
 
 // InitExampleRouter 用户案例模块
 func InitExampleRouter(r *gin.RouterGroup) gin.IRouter {
 	exampleRouter := example.NewExampleApi()
 	router := r.Group("/example")
-	////开启jwt认证中间件
-	//router.Use(global.AuthMiddleware.MiddlewareFunc())
-	//// 开启casbin鉴权中间件
-	//router.Use(middleware.CasbinMiddleware())
+	//开启jwt认证中间件
+	router.Use(global.AuthMiddleware.MiddlewareFunc())
+	// 开启casbin鉴权中间件
+	router.Use(middleware.CasbinMiddleware())
 
 	{
 		router.POST("/create", exampleRouter.PostExample)        // 创建

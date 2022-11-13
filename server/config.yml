@@ -63,7 +63,7 @@ casbin:
 # jwt配置
 jwt:
   # jwt标识
-  realm: test—jwt
+  realm: gin-admin-template
   # 服务端密钥
   key: 123456789
   # token过期时间, 小时
@@ -79,3 +79,13 @@ rate-limit:
   quantum: 100
   # 桶容量
   capacity: 1000
+# 七牛云
+qiniu:
+  # AccessKey
+  AccessKey: -rqxymcS3Tnb3DkfbRA5pgXJ_xLAe2OPmAzuF3sK
+  # SecretKey
+  SecretKey: LFHwG9a0obN_cjYOVvCHiqK16yn3e2GJbXo9UAnM
+  # Bucket
+  Bucket: blogtx
+  # Origin
+  Origin: qw80hwwsp.hd-bkt.clouddn.com

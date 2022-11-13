@@ -5,12 +5,11 @@ import (
 )
 
 func main() {
-	initialize.InitConfig()          // 加载配置文件到全局配置结构体
-	initialize.InitializeI18n()      // 初始化I18N国际化
-	initialize.InitLogger()          // 初始化日志
-	initialize.InitRedis()           //  初始化数据库(redis)
-	initialize.InitMysql()           // 初始化数据库(mysql)
-	initialize.InitCasbinEnforcer()  // 初始化casbin策略管理器
-	_ = initialize.InitValidate()    // 初始化Validator数据校验
-	initialize.InitializeRunServer() // 初始化服务器
+	initialize.InitConfig()         // 加载配置文件到全局配置结构体
+	initialize.InitLogger()         // 初始化日志
+	initialize.InitRedis()          // 初始化数据库redis
+	initialize.InitMysql()          // 初始化数据库mysql
+	initialize.InitCasbinEnforcer() // 初始化casbin策略
+	initialize.InitValidate()       // 初始化Validator数据校验
+	initialize.InitRun()            // 初始化服务器
 }

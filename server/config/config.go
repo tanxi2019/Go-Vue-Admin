@@ -16,6 +16,7 @@ type config struct {
 	Casbin    *CasbinConfig    `mapstructure:"casbin" json:"casbin"`
 	Jwt       *JwtConfig       `mapstructure:"jwt" json:"jwt"`
 	RateLimit *RateLimitConfig `mapstructure:"rate-limit" json:"rateLimit"`
+	Qiniu     *QiniuConfig     `mapstructure:"qiniu" json:"qiniu"`
 }
 
 type SystemConfig struct {
@@ -68,4 +69,11 @@ type RateLimitConfig struct {
 	FillInterval int64 `mapstructure:"fill-interval" json:"fillInterval"`
 	Capacity     int64 `mapstructure:"capacity" json:"capacity"`
 	Quantum      int64 `mapstructure:"quantum" json:"quantum"`
+}
+
+type QiniuConfig struct {
+	AccessKey string `mapstructure:"accessKey" json:"accessKey"`
+	SecretKey string `mapstructure:"secretKey" json:"secretKey"`
+	Bucket    string `mapstructure:"bucket" json:"bucket"`
+	Origin    string `mapstructure:"origin" json:"origin"`
 }

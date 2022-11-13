@@ -101,6 +101,7 @@ func (ud User) Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) {
 func (ud User) GetCurrentUser(c *gin.Context) (system.User, error) {
 	var newUser system.User
 	ctxUser, exist := c.Get("user")
+
 	if !exist {
 		return newUser, errors.New("用户未登录")
 	}

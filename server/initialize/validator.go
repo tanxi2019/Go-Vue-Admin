@@ -16,7 +16,7 @@ import (
 )
 
 // InitValidate validator信息翻译
-func InitValidate() (err error) {
+func InitValidate() {
 	var Trans ut.Translator
 	//修改gin框架中的validator引擎属性, 实现定制
 	if v, ok := binding.Validator.Engine().(*validator.Validate); ok {
@@ -35,7 +35,7 @@ func InitValidate() (err error) {
 		Trans, ok = uni.GetTranslator(config.Conf.System.I18nLanguage)
 		global.Trans = Trans
 		if !ok {
-			return fmt.Errorf("uni.GetTranslator(%s)", config.Conf.System.I18nLanguage)
+			fmt.Errorf("uni.GetTranslator(%s)", config.Conf.System.I18nLanguage)
 		}
 		switch config.Conf.System.I18nLanguage {
 		case "en":
@@ -46,7 +46,5 @@ func InitValidate() (err error) {
 			_ = en_translations.RegisterDefaultTranslations(v, Trans)
 		}
 
-		return
 	}
-	return
 }

@@ -43,6 +43,7 @@ func InitRouter() *gin.Engine {
 	GroupRouter(r)
 	// r.Static(relativePath string, root string)
 	global.Log.Info("初始化路由完成！")
+
 	return r
 }
 
@@ -58,6 +59,8 @@ func GroupRouter(r *gin.Engine) {
 	system.InitOperationLogRouter(apiGroup) // 注册操作日志路由, jwt认证中间件,casbin鉴权中间件
 	system.InitDictRouter(apiGroup)         // 注册操作字典路由, jwt认证中间件,casbin鉴权中间件
 	system.InitDictDetailsRouter(apiGroup)  // 注册操作字典详情路由, jwt认证中间件,casbin鉴权中间件
+	system.InitUploadRouter(apiGroup)       // 文件上传, jwt认证中间件,casbin鉴权中间件
+
 	// 用户案例模块
 	example.InitExampleRouter(apiGroup) // 注册基础路由, jwt认证中间件,要casbin中间件
 
