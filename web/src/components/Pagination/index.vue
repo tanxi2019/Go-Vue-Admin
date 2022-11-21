@@ -55,7 +55,8 @@
 
 <style scoped>
   .pagination {
-    margin: 10px 0;
-    float: right;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: row-reverse;
   }
 </style>

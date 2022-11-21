@@ -95,7 +95,7 @@ func (e Example) SetExampleRankCache(company []*redis.Z) error {
 // GetExampleRankCache 获取排行榜
 func (e Example) GetExampleRankCache() ([]string, error) {
 	key := fmt.Sprintf("Rank")
-	rank, err := global.Redis.ZRevRange(context.Background(), key, 0, 9).Result()
+	rank, err := global.Redis.ZRevRange(context.Background(), key, 0, 11).Result()
 	if err != nil {
 		return nil, err
 	}

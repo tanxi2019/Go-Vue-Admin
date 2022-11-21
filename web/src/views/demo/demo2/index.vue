@@ -1,22 +1,24 @@
 <template>
-  <div class="container">
-    <el-card class="container-card" shadow="always">
-<!-- tabor     -->
-      <el-form size="mini" :inline="true" :model="selectFrom"  class="demo-form-inline">
+  <div class="container" >
+    <!-- tabor     -->
+    <div class="tabor">
+      <el-form size="mini" :inline="true" :model="selectFrom" >
         <el-form-item label="姓名" prop="name">
-          <el-input v-model.trim="selectFrom.name" clearable placeholder="姓名" @clear="hadleClickSelect" />
+          <el-input v-model.trim="selectFrom.name" clearable placeholder="姓名" @clear="hadleClickSelect"/>
         </el-form-item>
         <el-form-item label="年龄" prop="age">
-          <el-input v-model.trim="selectFrom.age" clearable placeholder="年龄" @clear="hadleClickSelect" />
+          <el-input v-model.trim="selectFrom.age" clearable placeholder="年龄" @clear="hadleClickSelect"/>
         </el-form-item>
         <el-form-item label="性别" prop="sex">
-          <el-select v-model.trim="selectFrom.sex" clearable placeholder="性别" @change="hadleClickSelect" @clear="hadleClickSelect">
-            <el-option label="男" value="1" />
-            <el-option label="女" value="2" />
+          <el-select v-model.trim="selectFrom.sex" clearable placeholder="性别" @change="hadleClickSelect"
+                     @clear="hadleClickSelect"
+          >
+            <el-option label="男" value="1"/>
+            <el-option label="女" value="2"/>
           </el-select>
         </el-form-item>
         <el-form-item label="手机号" prop="mobile">
-          <el-input v-model.trim="selectFrom.mobile" clearable placeholder="手机号" @clear="hadleClickSelect" />
+          <el-input v-model.trim="selectFrom.mobile" clearable placeholder="手机号" @clear="hadleClickSelect"/>
         </el-form-item>
         <el-form-item>
           <Button :but="Select" @but="hadleClickSelect"/>
@@ -26,11 +28,15 @@
         </el-form-item>
 
       </el-form>
+    </div>
+
+    <div class="table-box"  >
+
       <!--
-       @author:风很大
-       @description: 表格数据
-       @time: 2021/12/22 0022
-      -->
+      @author:风很大
+      @description: 表格数据
+      @time: 2021/12/22 0022
+       -->
       <Table
         :table="table"
         :pagination="pagination"
@@ -38,17 +44,17 @@
         @select="handleSelectionChange"
         @page="handleCurrentChange"
       >
-        <el-table-column show-overflow-tooltip sortable prop="ID" label="ID" />
-        <el-table-column show-overflow-tooltip sortable prop="name" label="姓名" />
-        <el-table-column show-overflow-tooltip sortable prop="sex" label="性别" align="center">
+        <el-table-column show-overflow-tooltip sortable prop="ID" label="ID"/>
+        <el-table-column show-overflow-tooltip sortable prop="name" label="姓名"/>
+        <el-table-column show-overflow-tooltip sortable prop="sex" label="性别">
           <template slot-scope="scope">
-            <el-tag size="small" >{{ scope.row.sex === 2 ? "女" : "男"}}</el-tag>
+            <el-tag size="small">{{ scope.row.sex === 2 ? '女' : '男' }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column show-overflow-tooltip sortable prop="age" label="年龄" />
-        <el-table-column show-overflow-tooltip sortable prop="count" label="访问量" />
-        <el-table-column show-overflow-tooltip sortable prop="mobile" label="手机号" />
-        <el-table-column show-overflow-tooltip sortable prop="description" label="描述" />
+        <el-table-column show-overflow-tooltip sortable prop="age" label="年龄"/>
+        <el-table-column show-overflow-tooltip sortable prop="count" label="访问量"/>
+        <el-table-column show-overflow-tooltip sortable prop="mobile" label="手机号"/>
+        <el-table-column show-overflow-tooltip sortable prop="description" label="描述"/>
         <el-table-column label="操作" align="center" width="300px">
           <template slot-scope="scope">
             <!--
@@ -67,37 +73,41 @@
       @description: 分页组件
       @time: 2022/1/17 0017
       -->
+      <!--      <div class="pagination">-->
       <Pagination :pagination="pagination" @page="handleCurrentChange" @size="handleSizeChange"/>
+      <!--      </div>-->
       <!--
       @author:风很大
       @description: 新增
       @time: 2022/1/13 0013
      -->
-      <Dialog :dialog="AddDialog" @confirm="handClickAdd" >
+      <Dialog :dialog="AddDialog" @confirm="handClickAdd">
         <template slot="dialog">
           <el-form ref="addForm" size="small" :model="addForm" :rules="addFormRules" label-width="80px">
 
             <el-form-item label="姓名" prop="name">
-              <el-input ref="password" v-model.trim="addForm.name" placeholder="姓名" />
+              <el-input ref="password" v-model.trim="addForm.name" placeholder="姓名"/>
             </el-form-item>
 
             <el-form-item label="性别" prop="sex">
               <el-select v-model.trim="addForm.sex" placeholder="请选择性别" style="width:100%">
-                <el-option label="男" :value="1" />
-                <el-option label="女" :value="2" />
+                <el-option label="男" :value="1"/>
+                <el-option label="女" :value="2"/>
               </el-select>
             </el-form-item>
 
             <el-form-item label="年龄" prop="age">
-              <el-input v-model.trim="addForm.age" placeholder="年龄" />
+              <el-input v-model.trim="addForm.age" placeholder="年龄"/>
             </el-form-item>
 
             <el-form-item label="手机号" prop="mobile">
-              <el-input v-model.trim="addForm.mobile" placeholder="手机号" />
+              <el-input v-model.trim="addForm.mobile" placeholder="手机号"/>
             </el-form-item>
 
             <el-form-item label="说明" prop="description">
-              <el-input v-model.trim="addForm.description" type="textarea" placeholder="说明" show-word-limit maxlength="100" />
+              <el-input v-model.trim="addForm.description" type="textarea" placeholder="说明" show-word-limit
+                        maxlength="100"
+              />
             </el-form-item>
 
           </el-form>
@@ -113,83 +123,88 @@
           <el-form ref="editForm" size="small" :model="editForm" :rules="editFormRules" label-width="80px">
 
             <el-form-item label="姓名" prop="name">
-              <el-input ref="password" v-model.trim="editForm.name" placeholder="姓名" />
+              <el-input ref="password" v-model.trim="editForm.name" placeholder="姓名"/>
             </el-form-item>
 
             <el-form-item label="性别" prop="sex">
               <el-select v-model.trim="editForm.sex" placeholder="请选择性别" style="width:100%">
-                <el-option label="男" :value="1" />
-                <el-option label="女" :value="2" />
+                <el-option label="男" :value="1"/>
+                <el-option label="女" :value="2"/>
               </el-select>
             </el-form-item>
 
             <el-form-item label="年龄" prop="age">
-              <el-input v-model.trim="editForm.age" placeholder="年龄" />
+              <el-input v-model.trim="editForm.age" placeholder="年龄"/>
             </el-form-item>
 
             <el-form-item label="手机号" prop="mobile">
-              <el-input v-model.trim="editForm.mobile" placeholder="手机号" />
+              <el-input v-model.trim="editForm.mobile" placeholder="手机号"/>
             </el-form-item>
 
             <el-form-item label="说明" prop="description">
-              <el-input v-model.trim="editForm.description" type="textarea" placeholder="说明" show-word-limit maxlength="100" />
+              <el-input v-model.trim="editForm.description" type="textarea" placeholder="说明" show-word-limit
+                        maxlength="100"
+              />
             </el-form-item>
 
           </el-form>
         </template>
       </Dialog>
       <!--
-    @author:风很大
-    @description: 详情
-    @time: 2022/1/13 0013
+      @author:风很大
+      @description: 详情
+      @time: 2022/1/13 0013
     -->
       <Dialog :dialog="DetailDialog" @confirm="handClickDetail">
         <template slot="dialog">
           <el-form ref="detailForm" size="small" label-width="80px">
 
-            <el-form-item label="姓名" prop="name" >
-              <el-input v-model.trim="detailForm.name" placeholder="姓名" :disabled="true" />
+            <el-form-item label="姓名" prop="name">
+              <el-input v-model.trim="detailForm.name" placeholder="姓名" :disabled="true"/>
             </el-form-item>
 
             <el-form-item label="性别" prop="sex">
               <el-select v-model.trim="detailForm.sex" placeholder="请选择性别" :disabled="true" style="width:100%">
-                <el-option label="男" :value="1" />
-                <el-option label="女" :value="2" />
+                <el-option label="男" :value="1"/>
+                <el-option label="女" :value="2"/>
               </el-select>
             </el-form-item>
 
             <el-form-item label="年龄" prop="age">
-              <el-input v-model.trim="detailForm.age" placeholder="年龄" :disabled="true" />
+              <el-input v-model.trim="detailForm.age" placeholder="年龄" :disabled="true"/>
             </el-form-item>
 
             <el-form-item label="手机号" prop="mobile">
-              <el-input v-model.trim="detailForm.mobile" placeholder="手机号" :disabled="true" />
+              <el-input v-model.trim="detailForm.mobile" placeholder="手机号" :disabled="true"/>
             </el-form-item>
 
             <el-form-item label="访问量" prop="count">
-              <el-input v-model.trim="detailForm.count" placeholder="访问量" :disabled="true" />
+              <el-input v-model.trim="detailForm.count" placeholder="访问量" :disabled="true"/>
             </el-form-item>
 
             <el-form-item label="说明" prop="description">
-              <el-input v-model.trim="detailForm.description" type="textarea" placeholder="说明" :disabled="true" show-word-limit maxlength="100" />
+              <el-input v-model.trim="detailForm.description" type="textarea" placeholder="说明" :disabled="true"
+                        show-word-limit maxlength="100"
+              />
             </el-form-item>
 
           </el-form>
         </template>
       </Dialog>
-    </el-card>
+    </div>
+
   </div>
 </template>
 <script>
-import { listExample,removeExample,deleteExample,createExample,putExample,GetExample } from '@/api/example'
+import { listExample, removeExample, deleteExample, createExample, putExample, GetExample } from '@/api/example'
 import Table from '@/components/Table'
 import Dialog from '@/components/Dialog'
 import Button from '@/components/Button'
 import Pagination from '@/components/Pagination'
 
 export default {
-  name:"index",
-  inject:['reload'],
+  name: 'index',
+  inject: ['reload'],
   components: { Button, Table, Dialog, Pagination },
   data() {
     let checkPhone = (rule, value, callback) => {
@@ -205,19 +220,27 @@ export default {
       }
     }
     return {
-      multipleSelection:[],
+      watermark: {
+        text: '🍇🍇🍇🍓🍓🍓',
+        font: '16px Microsoft JhengHei',
+        color: 'rgba(180, 180, 180, 0.3)',
+        time: new Date().toLocaleTimeString()
+      },
+      multipleSelection: [],
       // 查询表单
       selectFrom: {
         name: '',
         age: null,
         sex: null,
         mobile: '',
-        description: ''
+        description: '',
+        page: 1,
+        size: 10,
       },
       // 添加表单验证
       addFormRules: {
         name: [
-          { required: true, message: '请输入姓名', trigger: 'blur' },
+          { required: true, message: '请输入姓名', trigger: 'blur' }
         ],
         age: [
           { required: true, message: '请输入年龄', trigger: 'blur' }
@@ -236,7 +259,7 @@ export default {
       // 编辑表单验证
       editFormRules: {
         name: [
-          { required: true, message: '请输入姓名', trigger: 'blur' },
+          { required: true, message: '请输入姓名', trigger: 'blur' }
         ],
         age: [
           { required: true, message: '请输入年龄', trigger: 'blur' }
@@ -255,7 +278,7 @@ export default {
       // 详情表单验证
       detailFormRules: {
         name: [
-          { required: true, message: '请输入姓名', trigger: 'blur' },
+          { required: true, message: '请输入姓名', trigger: 'blur' }
         ],
         age: [
           { required: true, message: '请输入年龄', trigger: 'blur' }
@@ -281,7 +304,7 @@ export default {
       },
       // 编辑表单
       editForm: {
-        id:'',
+        id: '',
         name: '',
         age: 0,
         sex: null,
@@ -290,11 +313,11 @@ export default {
       },
       // 详情表单
       detailForm: {
-        id:'',
+        id: '',
         name: '',
         age: 0,
-        sex: null,
-        count:0,
+        sex: 0,
+        count: 0,
         mobile: '',
         description: ''
       },
@@ -317,7 +340,6 @@ export default {
         disabled: false,
         show: true
       },
-
       Detail: {
         name: '详情',
         size: 'mini',
@@ -359,10 +381,10 @@ export default {
         size: 'mini',
         type: 'warning',
         icon: 'el-icon-refresh',
-        circle:false,
-        plain:false,
-        disabled:false,
-        show:true
+        circle: false,
+        plain: false,
+        disabled: false,
+        show: true
       },
       Import: {
         name: '导入',
@@ -380,7 +402,7 @@ export default {
         icon: 'el-icon-download',
         plain: true,
         disabled: false,
-        show: true,
+        show: true
 
       },
       // 弹窗配置
@@ -409,7 +431,7 @@ export default {
       setting: {
         checkbox: true,
         order: false,
-        loading:false
+        loading: false
       }
     }
   },
@@ -419,7 +441,7 @@ export default {
   methods: {
     // 刷新页面
     refresh() {
-      this.reload();
+      this.reload()
     },
 
     /**
@@ -431,14 +453,23 @@ export default {
      */
     getTable: async function() {
       this.setting.loading = true
-      let table = await listExample({ page: this.pagination.page, size: this.pagination.size })
-      let {code,data} = table
-      if (code === 200){
+      let param = {
+        page: this.selectFrom.page,
+        size: this.selectFrom.size,
+        name: this.selectFrom.name,
+        age: this.selectFrom.age,
+        sex: this.selectFrom.sex,
+        mobile: this.selectFrom.mobile,
+        description: this.selectFrom.description
+      }
+      let table = await listExample(param)
+      let { code, data } = table
+      if (code === 200) {
         this.table = data.data
         this.pagination.total = data.total
         setTimeout(() => {
           this.setting.loading = false
-        }, 1000);
+        }, 1000)
       }
 
     },
@@ -456,7 +487,7 @@ export default {
      * @author 风很大
      * @date 2022/1/17 0017
      */
-    handleSizeChange:function(val) {
+    handleSizeChange: function(val) {
       this.pagination.pageSize = val
       this.getTable()
     },
@@ -469,11 +500,11 @@ export default {
       this.$confirm('确认删除？')
         .then(() => {
           let data = { id: item.ID }
-          deleteExample(data).then( res =>{
+          deleteExample(data).then(res => {
             this.$message({
               message: res.msg,
               type: 'success'
-            });
+            })
             this.getTable()
           })
         })
@@ -492,21 +523,7 @@ export default {
      */
     hadleClickSelect: function() {
       this.setting.loading = true
-      let data = {
-        page:this.pagination.page,
-        name: this.selectFrom.name,
-        age: this.selectFrom.age,
-        sex: this.selectFrom.sex,
-        mobile: this.selectFrom.mobile,
-        description:this.selectFrom.description
-      }
-      listExample(data).then(res => {
-        this.table = res.data.data // 赋值
-        this.pagination.total = res.data.total
-        setTimeout(() => {
-          this.setting.loading = false
-        }, 1000);
-      })
+      this.getTable()
     },
     /**
      * @Description: 编辑事件
@@ -522,7 +539,7 @@ export default {
       this.editForm.sex = item.sex
       this.editForm.mobile = item.mobile
       this.editForm.description = item.description
-      this.$nextTick(()=>{
+      this.$nextTick(() => {
         this.$refs.editForm.clearValidate()
       })
     },
@@ -537,19 +554,19 @@ export default {
         if (valid) {
           this.EditDialog.dialog = false
           let data = {
-            id:this.editForm.id,
-            name:this.editForm.name,
+            id: this.editForm.id,
+            name: this.editForm.name,
             age: parseInt(this.editForm.age),
             sex: this.editForm.sex,
             mobile: this.editForm.mobile,
-            description:this.editForm.description
+            description: this.editForm.description
           }
-          putExample(data).then( res =>{
+          putExample(data).then(res => {
             this.getTable()
             this.$message({
               message: res.msg,
               type: 'success'
-            });
+            })
 
           })
         } else {
@@ -567,8 +584,8 @@ export default {
     handClickDetailDialog: async function(item) {
       this.DetailDialog.dialog = true
 
-      let {code,data} = await GetExample({ id:item.ID })
-      if (code === 200){
+      let { code, data } = await GetExample({ id: item.ID })
+      if (code === 200) {
         this.detailForm.age = data.age
         this.detailForm.sex = data.sex
         this.detailForm.count = data.count
@@ -593,7 +610,7 @@ export default {
      */
     handClickAddDialog: function() {
       this.AddDialog.dialog = true
-      this.$nextTick(()=>{
+      this.$nextTick(() => {
         this.$refs.addForm.clearValidate()
       })
     },
@@ -614,11 +631,11 @@ export default {
             mobile: this.addForm.mobile,
             description: this.addForm.description
           }
-          createExample(data).then( res =>{
+          createExample(data).then(res => {
             this.$message({
               message: res.msg,
               type: 'success'
-            });
+            })
             this.getTable()
           })
 
@@ -635,7 +652,7 @@ export default {
      */
     handleSelectionChange: function(val) {
       this.multipleSelection = val
-      this.DeleteAll.disabled =  this.multipleSelection.length === 0
+      this.DeleteAll.disabled = this.multipleSelection.length === 0
     },
     /**
      * @Description: 全部删除事件
@@ -647,7 +664,7 @@ export default {
         confirmButtonText: '确定',
         cancelButtonText: '取消',
         type: 'warning'
-      }).then(async () => {
+      }).then(async() => {
         const exampleIds = []
         this.multipleSelection.forEach(x => {
           exampleIds.push(x.ID)
@@ -690,12 +707,9 @@ export default {
 </script>
 
 <style lang="scss">
-.container-card{
-  margin: 10px;
-}
 .table-box {
-  width: 100%;
-  margin: 15px 0;
+  background-color: #ffffff;
+  padding: 15px 10px;
 }
 
 .but-box {
@@ -727,5 +741,6 @@ export default {
     margin-left: 2px;
   }
 }
+
 </style>
 

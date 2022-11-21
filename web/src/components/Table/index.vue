@@ -1,5 +1,5 @@
 <template>
-  <div class="table">
+  <div>
     <!--
     @author:风很大
     @description: 表格组件
@@ -11,8 +11,6 @@
     <el-table
       v-loading="setting.loading"
       :data="table"
-      border
-      class="table"
       row-key="id"
       @selection-change="handleSelectionChange">
 
@@ -60,8 +58,3 @@
   }
 </script>
 
-<style scoped>
-  .table {
-    width: 100%;
-  }
-</style>

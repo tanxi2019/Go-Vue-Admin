@@ -53,3 +53,11 @@ export function removeExample(data) {
   })
 }
 
+// 列表
+export function rank(params) {
+  return request({
+    url: '/api/example/rank',
+    method: 'get',
+    params
+  })
+}

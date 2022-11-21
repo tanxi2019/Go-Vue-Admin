@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-card class="container-card" shadow="always">
+  <div class="container">
+    <div class="tabor">
       <el-form size="mini" :inline="true" :model="params" class="demo-form-inline">
         <el-form-item label="角色名称">
           <el-input v-model.trim="params.name" clearable placeholder="角色名称" @clear="search" />
@@ -15,18 +15,26 @@
           </el-select>
         </el-form-item>
         <el-form-item>
-          <el-button :loading="loading" icon="el-icon-search" type="success" @click="search">查询</el-button>
-        </el-form-item>
-        <el-form-item>
-          <el-button :loading="loading" icon="el-icon-plus" type="primary" @click="create">新增</el-button>
-        </el-form-item>
-        <el-form-item>
-          <el-button :disabled="multipleSelection.length === 0" :loading="loading" icon="el-icon-delete" type="danger" @click="batchDelete">批量删除</el-button>
+          <Button :but="Select" @but="search"/>
+          <Button :but="Add" @but="create"/>
+          <Button :but="DeleteAll" @but="batchDelete"/>
+          <Button :but="Refresh" @but="refresh()"/>
         </el-form-item>
       </el-form>
-
-      <el-table v-loading="loading" :data="tableData" border stripe style="width: 100%" @selection-change="handleSelectionChange">
-        <el-table-column type="selection" width="55" align="center" />
+    </div>
+    <div class="table-box"  >
+      <!--
+      @author:风很大
+      @description: 表格数据
+      @time: 2021/12/22 0022
+       -->
+      <Table
+        :table="table"
+        :pagination="pagination"
+        :setting="setting"
+        @select="handleSelectionChange"
+        @page="handleCurrentChange"
+      >
         <el-table-column show-overflow-tooltip sortable prop="name" label="角色名称" />
         <el-table-column show-overflow-tooltip sortable prop="keyword" label="关键字" />
         <el-table-column show-overflow-tooltip sortable prop="sort" label="等级" />
@@ -37,31 +45,30 @@
         </el-table-column>
         <el-table-column show-overflow-tooltip sortable prop="creator" label="创建人" />
         <el-table-column show-overflow-tooltip sortable prop="desc" label="说明" />
-        <el-table-column fixed="right" label="操作" align="center" width="250">
+        <el-table-column label="操作" align="center" width="300px">
           <template slot-scope="scope">
-            <el-tooltip content="编辑" effect="dark" placement="top">
-              <el-button size="mini" icon="el-icon-edit" type="text" @click="update(scope.row)">编辑</el-button>
-            </el-tooltip>
-            <el-tooltip content="权限" effect="dark" placement="top">
-              <el-button size="mini" icon="el-icon-key" type="text" @click="updatePermission(scope.row.ID)">权限</el-button>
-            </el-tooltip>
-            <el-button :loading="loading" size="mini" icon="el-icon-delete" type="text" @click="singleDelete(scope.row.ID)">删除</el-button>
+            <!--
+            @author:风很大
+            @description: 操作  编辑 删除
+            @time: 2021/12/22 0022
+            -->
+            <Button :but="Edit" @but="update(scope.row)"/>
+            <el-button size="mini" icon="el-icon-key" type="text" @click="updatePermission(scope.row.ID)">权限</el-button>
+            <Button :but="Delete" @but="singleDelete(scope.row.ID)"/>
 
           </template>
         </el-table-column>
-      </el-table>
+      </Table>
+      <!--
+      @author:风很大
+      @description: 分页组件
+      @time: 2022/1/17 0017
+      -->
+      <Pagination :pagination="pagination" @page="handleCurrentChange" @size="handleSizeChange"/>
 
-      <el-pagination
-        :current-page="params.pageNum"
-        :page-size="params.pageSize"
-        :total="total"
-        :page-sizes="[1, 5, 10, 30]"
-        layout="total, prev, pager, next, sizes"
-        background
-        style="margin-top: 10px;float:right;margin-bottom: 10px;"
-        @size-change="handleSizeChange"
-        @current-change="handleCurrentChange"
-      />
+    </div>
+
+
 
       <el-dialog :title="dialogFormTitle" :visible.sync="dialogFormVisible" width="580px">
         <el-form ref="dialogForm" :inline="true" size="small" :model="dialogFormData" :rules="dialogFormRules" label-width="100px">
@@ -124,7 +131,6 @@
         </div>
       </el-dialog>
 
-    </el-card>
   </div>
 </template>
 
@@ -132,9 +138,15 @@
 import { getRoles, createRole, updateRoleById, batchDeleteRoleByIds, getRoleMenusById, getRoleApisById, updateRoleMenusById, updateRoleApisById } from '@/api/permission/role'
 import { getMenuTree } from '@/api/permission/menu'
 import { getApiTree } from '@/api/system/api'
+import Table from '@/components/Table'
+import Dialog from '@/components/Dialog'
+import Button from '@/components/Button'
+import Pagination from '@/components/Pagination'
 
 export default {
   name: 'Role',
+  inject: ['reload'],
+  components: { Button, Table, Dialog, Pagination },
   data() {
     return {
       // 查询参数
@@ -146,8 +158,118 @@ export default {
         pageSize: 10
       },
       // 表格数据
-      tableData: [],
-      total: 0,
+      // 按钮配置
+      Add: {
+        name: '新增',
+        size: 'mini',
+        type: 'primary',
+        icon: 'el-icon-plus',
+        plain: false,
+        disabled: false,
+        show: true
+      },
+      Select: {
+        name: '查询',
+        size: 'mini',
+        type: 'success',
+        icon: 'el-icon-search',
+        plain: false,
+        disabled: false,
+        show: true
+      },
+      Detail: {
+        name: '详情',
+        size: 'mini',
+        type: 'text',
+        icon: 'el-icon-view',
+        plain: false,
+        disabled: false,
+        show: true
+      },
+      Edit: {
+        name: '编辑',
+        size: 'mini',
+        type: 'text',
+        icon: 'el-icon-edit',
+        plain: false,
+        disabled: false,
+        show: true
+      },
+      Delete: {
+        name: '删除',
+        size: 'mini',
+        type: 'text',
+        icon: 'el-icon-delete',
+        plain: false,
+        disabled: false,
+        show: true
+      },
+      DeleteAll: {
+        name: '批量删除',
+        size: 'mini',
+        type: 'danger',
+        icon: 'el-icon-delete',
+        plain: false,
+        disabled: true,
+        show: true
+      },
+      Refresh: {
+        name: '刷新',
+        size: 'mini',
+        type: 'warning',
+        icon: 'el-icon-refresh',
+        circle: false,
+        plain: false,
+        disabled: false,
+        show: true
+      },
+      Import: {
+        name: '导入',
+        size: 'mini',
+        type: 'info',
+        icon: 'el-icon-upload2',
+        plain: true,
+        disabled: false,
+        show: true
+      },
+      Export: {
+        name: '导出',
+        size: 'mini',
+        type: 'warning',
+        icon: 'el-icon-download',
+        plain: true,
+        disabled: false,
+        show: true
+
+      },
+      // 弹窗配置
+      AddDialog: {
+        title: '新增',
+        dialog: false,
+        width: '600px'
+      },
+      EditDialog: {
+        title: '编辑',
+        dialog: false,
+        width: '600px'
+      },
+      DetailDialog: {
+        title: '详情',
+        dialog: false,
+        width: '600px'
+      },
+      // 表格和分页配置
+      pagination: {
+        page: 1,
+        size: 10,
+        total: 0
+      },
+      table: [],
+      setting: {
+        checkbox: true,
+        order: false,
+        loading: false
+      },
       loading: false,
 
       // dialog对话框
@@ -203,6 +325,10 @@ export default {
     this.getApiTree()
   },
   methods: {
+    // 刷新页面
+    refresh() {
+      this.reload()
+    },
     // 查询
     search() {
       this.params.pageNum = 1
@@ -214,8 +340,8 @@ export default {
       this.loading = true
       try {
         const { data } = await getRoles(this.params)
-        this.tableData = data.roles
-        this.total = data.total
+        this.table = data.roles
+        this.pagination.total = data.total
       } finally {
         this.loading = false
       }
@@ -332,6 +458,8 @@ export default {
     // 表格多选
     handleSelectionChange(val) {
       this.multipleSelection = val
+      this.DeleteAll.disabled = this.multipleSelection.length === 0
+
     },
 
     // 单个删除
@@ -500,17 +628,11 @@ export default {
 }
 </script>
 
-<style scoped >
-  .container-card{
-    margin: 10px;
-  }
-
-  .role-menu{
-    font-size: 15px;
-  }
-</style>
-
 <style lang="scss">
+.table-box {
+  background-color: #ffffff;
+  padding: 15px 10px;
+}
   .perms-dialog > .el-dialog__body{
     padding-top: 0;
     padding-bottom: 15px;

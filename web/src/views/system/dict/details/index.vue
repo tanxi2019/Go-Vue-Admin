@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <el-card class="container-card" shadow="always">
+    <div class="table-box">
 <!-- tabor     -->
-      <el-form size="mini" :inline="true" :model="selectFrom"  class="demo-form-inline">
+    <div  style="padding: 15px">
+      <el-form size="mini" :inline="true" :model="selectFrom" >
         <el-form-item>
           <Button :but="Add" @but="handClickAddDialog"/>
           <Button :but="DeleteAll" @but="hadleClickRemoveAll"/>
@@ -10,6 +11,7 @@
         </el-form-item>
 
       </el-form>
+    </div>
       <!--
        @author:风很大
        @description: 表格数据
@@ -117,7 +119,7 @@
           </el-form>
         </template>
       </Dialog>
-    </el-card>
+    </div>
   </div>
 </template>
 <script>
@@ -609,13 +611,10 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.container-card{
-  margin: 10px;
-}
+<style scoped lang="scss">
 .table-box {
-  width: 100%;
-  margin: 15px 0;
+  background-color: #ffffff;
+  padding: 15px 10px;
 }
 
 .but-box {
@@ -646,6 +645,9 @@ export default {
     width: 14px;
     margin-left: 2px;
   }
+}
+.el-form-item--mini.el-form-item{
+  margin-bottom: 0;
 }
 </style>
 

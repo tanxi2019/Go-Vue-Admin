@@ -1,32 +1,11 @@
 <template>
-  <div class="container">
-      <div class="tabor">
-        <!-- tabor     -->
-        <el-form size="mini" :inline="true" :model="selectFrom">
-          <el-form-item label="ID" prop="age">
-            <el-input v-model.trim="selectFrom.id" clearable placeholder="ID" @clear="hadleClickSelect" />
-          </el-form-item>
-          <el-form-item label="名称" prop="name">
-            <el-input v-model.trim="selectFrom.name" clearable placeholder="名称" @clear="hadleClickSelect" />
-          </el-form-item>
-          <el-form-item label="关键词" prop="mobile">
-            <el-input v-model.trim="selectFrom.keyword" clearable placeholder="关键词" @clear="hadleClickSelect" />
-          </el-form-item>
-          <el-form-item>
-            <Button :but="Select" @but="hadleClickSelect" />
-            <Button :but="Add" @but="handClickAddDialog" />
-            <Button :but="DeleteAll" @but="hadleClickRemoveAll" />
-            <Button :but="Refresh" @but="refresh()" />
-          </el-form-item>
-
-        </el-form>
-        </div>
-    <div class="table-box">
+  <div class="container" >
+    <div class="table-box" style="padding: 30px 15px">
       <!--
-    @author:风很大
-    @description: 表格数据
-    @time: 2021/12/22 0022
-   -->
+      @author:风很大
+      @description: 表格数据
+      @time: 2021/12/22 0022
+       -->
       <Table
         :table="table"
         :pagination="pagination"
@@ -34,129 +13,36 @@
         @select="handleSelectionChange"
         @page="handleCurrentChange"
       >
-        <el-table-column show-overflow-tooltip sortable prop="ID" label="ID" />
-        <el-table-column show-overflow-tooltip sortable prop="name" label="名称" />
-        <el-table-column show-overflow-tooltip sortable prop="keyword" label="关键词" />
-        <el-table-column show-overflow-tooltip sortable label="状态" prop="hidden" align="center">
-          <!--
-          @author:风很大
-          @description: 0:显示，1隐藏
-          @time: 2022/1/18 0018
-          -->
+        <el-table-column show-overflow-tooltip sortable prop="ID" label="ID"/>
+        <el-table-column show-overflow-tooltip sortable prop="name" label="姓名"/>
+        <el-table-column show-overflow-tooltip sortable prop="sex" label="性别">
           <template slot-scope="scope">
-            <el-switch v-model="scope.row.status!=0" :disabled="true" />
+            <el-tag size="small">{{ scope.row.sex === 2 ? '女' : '男' }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column show-overflow-tooltip sortable prop="desc" label="描述" />
-        <el-table-column show-overflow-tooltip sortable prop="creator" label="创建人" />
-        <el-table-column label="操作" align="center" width="300px">
-          <template slot-scope="scope">
-            <!--
-            @author:风很大
-            @description: 操作  编辑 删除
-            @time: 2021/12/22 0022
-            -->
-            <Button :but="Edit" @but="handClickEditDialog(scope.row)" />
-            <Button :but="Detail" @but="handClickDetailDialog(scope.row)" />
-            <Button :but="Delete" @but="handleClickRemove(scope.row)" />
-          </template>
-        </el-table-column>
+        <el-table-column show-overflow-tooltip sortable prop="age" label="年龄"/>
+        <el-table-column show-overflow-tooltip sortable prop="count" label="访问量"/>
+        <el-table-column show-overflow-tooltip sortable prop="mobile" label="手机号"/>
+        <el-table-column show-overflow-tooltip sortable prop="description" label="描述"/>
       </Table>
-      <!--
-      @author:风很大
-      @description: 分页组件
-      @time: 2022/1/17 0017
-      -->
-      <Pagination :pagination="pagination" @page="handleCurrentChange" @size="handleSizeChange" />
-      <!--
-      @author:风很大
-      @description: 新增
-      @time: 2022/1/13 0013
-     -->
-      <Dialog :dialog="AddDialog" @confirm="handClickAdd">
-        <template slot="dialog">
-          <el-form ref="addForm" size="small" :model="addForm" :rules="addFormRules" label-width="80px">
 
-            <el-form-item label="名称" prop="name">
-              <el-input v-model.trim="addForm.name" placeholder="名称" />
-            </el-form-item>
-
-            <el-form-item label="关键词" prop="keyword">
-              <el-input v-model.trim="addForm.keyword" placeholder="关键词" />
-            </el-form-item>
-
-            <el-form-item label="排序" prop="sort">
-              <el-input-number v-model.number="addForm.sort" controls-position="right" :min="1" :max="999" />
-            </el-form-item>
-
-            <el-form-item label="状态" prop="status">
-              <el-switch v-model="addForm.status!=0" />
-
-            </el-form-item>
-
-            <el-form-item label="创建人" prop="创建人">
-              <el-input v-model.trim="addForm.creator" placeholder="创建人" />
-            </el-form-item>
-
-            <el-form-item label="描述" prop="desc">
-              <el-input v-model.trim="addForm.desc" type="textarea" placeholder="描述" show-word-limit maxlength="100" />
-            </el-form-item>
-
-          </el-form>
-        </template>
-      </Dialog>
-      <!--
-      @author:风很大
-      @description: 编辑
-      @time: 2022/1/13 0013
-      -->
-      <Dialog :dialog="EditDialog" @confirm="handClickEdit">
-        <template slot="dialog">
-          <el-form ref="editForm" size="small" :model="editForm" :rules="editFormRules" label-width="80px">
-
-            <el-form-item label="名称" prop="name">
-              <el-input v-model.trim="editForm.name" placeholder="名称" />
-            </el-form-item>
-
-            <el-form-item label="关键词" prop="keyword">
-              <el-input v-model.trim="editForm.keyword" placeholder="关键词" />
-            </el-form-item>
-
-            <el-form-item label="排序" prop="sort">
-              <el-input-number v-model.number="editForm.sort" controls-position="right" :min="1" :max="999" />
-            </el-form-item>
-
-            <el-form-item label="状态" prop="status">
-              <el-switch v-model="editForm.status" />
-            </el-form-item>
-
-            <el-form-item label="创建人" prop="创建人">
-              <el-input v-model.trim="editForm.creator" placeholder="创建人" />
-            </el-form-item>
-
-            <el-form-item label="描述" prop="desc">
-              <el-input v-model.trim="editForm.desc" type="textarea" placeholder="描述" show-word-limit maxlength="100" />
-            </el-form-item>
-
-          </el-form>
-        </template>
-      </Dialog>
     </div>
+
   </div>
 </template>
 <script>
-import { listDict, removeDict, deleteDict, createDict, putDict } from '@/api/system/dict'
+import { rank } from '@/api/example'
 import Table from '@/components/Table'
 import Dialog from '@/components/Dialog'
 import Button from '@/components/Button'
 import Pagination from '@/components/Pagination'
 
 export default {
-  name: 'Index',
+  name: 'index',
   inject: ['reload'],
   components: { Button, Table, Dialog, Pagination },
   data() {
-    const checkPhone = (rule, value, callback) => {
+    let checkPhone = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('手机号不能为空'))
       } else {
@@ -172,9 +58,11 @@ export default {
       multipleSelection: [],
       // 查询表单
       selectFrom: {
-        id: null,
         name: '',
-        keyword: ''
+        age: null,
+        sex: null,
+        mobile: '',
+        description: ''
       },
       // 添加表单验证
       addFormRules: {
@@ -236,21 +124,19 @@ export default {
       // 添加表单
       addForm: {
         name: '',
-        keyword: '',
-        desc: '',
-        status: 1,
-        sort: 999,
-        creator: ''
+        age: null,
+        sex: 1,
+        mobile: '',
+        description: ''
       },
       // 编辑表单
       editForm: {
         id: '',
         name: '',
-        keyword: '',
-        desc: '',
-        sort: '',
-        status: '',
-        creator: ''
+        age: 0,
+        sex: null,
+        mobile: '',
+        description: ''
       },
       // 详情表单
       detailForm: {
@@ -258,6 +144,7 @@ export default {
         name: '',
         age: 0,
         sex: null,
+        count: 0,
         mobile: '',
         description: ''
       },
@@ -384,6 +271,7 @@ export default {
     refresh() {
       this.reload()
     },
+
     /**
      * @Description: 获取表格数据
      * @author 风很大
@@ -393,15 +281,15 @@ export default {
      */
     getTable: async function() {
       this.setting.loading = true
-      const table = await listDict({ page: this.pagination.page, size: this.pagination.size })
-      const { code, data } = table
+      let table = await rank()
+      let { code, data } = table
       if (code === 200) {
-        this.table = data.data
-        this.pagination.total = data.total
+        this.table = data
         setTimeout(() => {
           this.setting.loading = false
         }, 1000)
       }
+
     },
     /**
      * @Description: 分页点击事件
@@ -429,8 +317,8 @@ export default {
     handleClickRemove: function(item) {
       this.$confirm('确认删除？')
         .then(() => {
-          const data = { id: item.ID }
-          deleteDict(data).then(res => {
+          let data = { id: item.ID }
+          deleteExample(data).then(res => {
             this.$message({
               message: res.msg,
               type: 'success'
@@ -453,14 +341,15 @@ export default {
      */
     hadleClickSelect: function() {
       this.setting.loading = true
-      const data = {
+      let data = {
         page: this.pagination.page,
-        id: this.selectFrom.id,
         name: this.selectFrom.name,
-        keyword: this.selectFrom.keyword
-
+        age: this.selectFrom.age,
+        sex: this.selectFrom.sex,
+        mobile: this.selectFrom.mobile,
+        description: this.selectFrom.description
       }
-      listDict(data).then(res => {
+      listExample(data).then(res => {
         this.table = res.data.data // 赋值
         this.pagination.total = res.data.total
         setTimeout(() => {
@@ -474,14 +363,14 @@ export default {
      * @date 2022/1/13 0013
      */
     handClickEditDialog: function(item) {
+
       this.EditDialog.dialog = true
       this.editForm.id = item.ID
       this.editForm.name = item.name
-      this.editForm.keyword = item.keyword
-      this.editForm.sort = item.sort
-      this.editForm.status = item.status
-      this.editForm.creator = item.creator
-      this.editForm.desc = item.desc
+      this.editForm.age = item.age
+      this.editForm.sex = item.sex
+      this.editForm.mobile = item.mobile
+      this.editForm.description = item.description
       this.$nextTick(() => {
         this.$refs.editForm.clearValidate()
       })
@@ -496,29 +385,46 @@ export default {
       this.$refs.editForm.validate((valid) => {
         if (valid) {
           this.EditDialog.dialog = false
-          putDict(this.editForm).then(res => {
+          let data = {
+            id: this.editForm.id,
+            name: this.editForm.name,
+            age: parseInt(this.editForm.age),
+            sex: this.editForm.sex,
+            mobile: this.editForm.mobile,
+            description: this.editForm.description
+          }
+          putExample(data).then(res => {
             this.getTable()
             this.$message({
               message: res.msg,
               type: 'success'
             })
+
           })
         } else {
           console.log('error submit!!')
           return false
         }
       })
+
     },
     /**
      * @Description: 详情
      * @author 风很大
      * @date 2022/1/20 0020
      */
-    handClickDetailDialog: function(item) {
-      this.$router.push({
-        path: `/system/dict/${item.keyword}`,
-        params: { keyword: item.keyword }
-      }) // 动态路由
+    handClickDetailDialog: async function(item) {
+      this.DetailDialog.dialog = true
+
+      let { code, data } = await GetExample({ id: item.ID })
+      if (code === 200) {
+        this.detailForm.age = data.age
+        this.detailForm.sex = data.sex
+        this.detailForm.count = data.count
+        this.detailForm.description = data.description
+        this.detailForm.name = data.name
+        this.detailForm.mobile = data.mobile
+      }
     },
     /**
      * @Description: 详情确定
@@ -527,7 +433,7 @@ export default {
      */
     handClickDetail: function() {
       this.DetailDialog.dialog = false
-      console.log('详情确定', this.detailForm)
+      this.getTable()
     },
     /**
      * @Description: 新增弹框
@@ -550,20 +456,21 @@ export default {
       this.$refs.addForm.validate((valid) => {
         if (valid) {
           this.AddDialog.dialog = false
-          const data = {
+          let data = {
             name: this.addForm.name,
-            keyword: this.addForm.keyword,
-            sort: this.addForm.sort,
-            creator: this.addForm.creator,
-            desc: this.addForm.desc
+            age: parseInt(this.addForm.age),
+            sex: this.addForm.sex,
+            mobile: this.addForm.mobile,
+            description: this.addForm.description
           }
-          createDict(data).then(res => {
+          createExample(data).then(res => {
             this.$message({
               message: res.msg,
               type: 'success'
             })
             this.getTable()
           })
+
         } else {
           console.log('error submit!!')
           return false
@@ -590,12 +497,12 @@ export default {
         cancelButtonText: '取消',
         type: 'warning'
       }).then(async() => {
-        const dictIds = []
+        const exampleIds = []
         this.multipleSelection.forEach(x => {
-          dictIds.push(x.ID)
+          exampleIds.push(x.ID)
         })
 
-        const { msg } = await removeDict({ dictIds: dictIds })
+        const { msg } = await removeExample({ exampleIds: exampleIds })
 
         await this.getTable()
         this.$message({
@@ -632,7 +539,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .table-box {
   background-color: #ffffff;
   padding: 15px 10px;
@@ -667,5 +573,6 @@ export default {
     margin-left: 2px;
   }
 }
+
 </style>
 

@@ -10,6 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  background-color: #f0f2f5;
   font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
 }
 
@@ -188,4 +189,13 @@ aside {
 
 .multiselect--active {
   z-index: 1000 !important;
+}
+.container{
+  margin: 15px;
+}
+.tabor{
+  padding: 24px 24px 2px;
+  background-color: #fff;
+  border-radius: 2px;
+  margin-bottom: 12px;
 }

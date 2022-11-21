@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-card class="container-card" shadow="always">
+  <div class="container">
+    <div class="tabor" style="margin: 0">
       <el-form size="mini" :inline="true" class="demo-form-inline">
         <el-form-item>
           <el-button :loading="loading" icon="el-icon-plus" type="primary" @click="create">新增</el-button>
@@ -10,11 +10,27 @@
         </el-form-item>
       </el-form>
 
-      <el-table v-loading="loading" :tree-props="{children: 'children', hasChildren: 'hasChildren'}" row-key="ID" :data="tableData" border stripe style="width: 100%" @selection-change="handleSelectionChange">
+    </div>
+
+      <el-table v-loading="loading"
+                :tree-props="{children: 'children', hasChildren: 'hasChildren'}"
+                row-key="ID"
+                :data="tableData"
+                style="width: 100%"
+                @selection-change="handleSelectionChange">
         <el-table-column type="selection" width="55" align="center" />
         <el-table-column show-overflow-tooltip prop="title" label="菜单标题" width="150" />
         <el-table-column show-overflow-tooltip prop="name" label="名称" />
-        <el-table-column show-overflow-tooltip prop="icon" label="图标" />
+        <el-table-column  show-overflow-tooltip label="图标" prop="icon" >
+          <!--
+          @author:风很大
+          @description: 菜单图标
+          @time: 2022/1/18 0018
+          -->
+          <template slot-scope="scope">
+            <svg-icon :icon-class="scope.row.icon" class-name="card-panel-icon" />
+          </template>
+        </el-table-column>
         <el-table-column show-overflow-tooltip prop="path" label="路由地址" />
         <el-table-column show-overflow-tooltip prop="component" label="组件路径" />
         <el-table-column show-overflow-tooltip prop="redirect" label="重定向" />
@@ -115,8 +131,6 @@
           <el-button size="mini" :loading="submitLoading" type="primary" @click="submitForm()">确 定</el-button>
         </div>
       </el-dialog>
-
-    </el-card>
   </div>
 </template>
 
