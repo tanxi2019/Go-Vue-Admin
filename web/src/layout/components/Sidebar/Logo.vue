@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      title: 'Vue Element Admin',
+      title: 'Go Vue Admin',
       logo: require('@/assets/logo.png')
     }
   }

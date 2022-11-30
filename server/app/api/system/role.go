@@ -128,7 +128,7 @@ func (rs RoleApiService) UpdateRoleById(c *gin.Context) {
 
 	// 当前用户角色排序最小值（最高等级角色）以及当前用户
 	ur := service.NewUserService()
-	minSort, ctxUser, err := ur.GetCurrentUserMinRoleSort(c)
+	_, ctxUser, err := ur.GetCurrentUserMinRoleSort(c)
 	if err != nil {
 		// 错误返回
 		response.Error(c, http.StatusBadRequest, code.ServerErr, err.Error(), nil)
@@ -146,18 +146,6 @@ func (rs RoleApiService) UpdateRoleById(c *gin.Context) {
 	if len(roles) == 0 {
 		// 错误返回
 		response.Error(c, http.StatusBadRequest, code.ServerErr, "未获取到角色信息", nil)
-		return
-	}
-	if minSort >= roles[0].Sort {
-		// 错误返回
-		response.Error(c, http.StatusBadRequest, code.ServerErr, "不能更新比自己角色等级高或相等的角色", nil)
-		return
-	}
-
-	// 不能把角色等级更新得比当前用户的等级高
-	if minSort >= req.Sort {
-		// 错误返回
-		response.Error(c, http.StatusBadRequest, code.ServerErr, "不能把角色等级更新得比当前用户的等级高或相同", nil)
 		return
 	}
 

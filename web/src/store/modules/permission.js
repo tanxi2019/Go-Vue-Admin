@@ -8,10 +8,10 @@ export const getRoutesFromMenuTree = (menuTree) => {
     if (menu.children && menu.children.length > 0) {
       menu.children = getRoutesFromMenuTree(menu.children)
     }
-    // else {
-    //   // 这里需要清理children, 否则右侧会显示下拉图标
-    //   delete menu.children
-    // }
+    else {
+      // 这里需要清理children, 否则右侧会显示下拉图标
+      delete menu.children
+    }
     routes.push({
       path: menu.path,
       name: menu.name,

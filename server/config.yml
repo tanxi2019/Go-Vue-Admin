@@ -30,7 +30,7 @@ mysql:
   # 用户名
   username: root
   # 密码
-  password: 123456
+  password: tanxi82694
   # 数据库名
   database: gin-vue-admin
   # 主机地址 182.61.133.217

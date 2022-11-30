@@ -135,7 +135,6 @@ func (rd Role) UpdateRoleApis(roleKeyword string, reqRolePolicies [][]string) er
 		}
 	}
 	isAdded, _ := global.CasbinEnforcer.AddPolicies(reqRolePolicies)
-	fmt.Println(isAdded)
 	if !isAdded {
 		return errors.New("更新角色的权限接口失败")
 	}

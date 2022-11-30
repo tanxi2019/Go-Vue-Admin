@@ -453,16 +453,7 @@ export default {
      */
     getTable: async function() {
       this.setting.loading = true
-      let param = {
-        page: this.selectFrom.page,
-        size: this.selectFrom.size,
-        name: this.selectFrom.name,
-        age: this.selectFrom.age,
-        sex: this.selectFrom.sex,
-        mobile: this.selectFrom.mobile,
-        description: this.selectFrom.description
-      }
-      let table = await listExample(param)
+      let table = await listExample(this.selectFrom)
       let { code, data } = table
       if (code === 200) {
         this.table = data.data
@@ -479,7 +470,7 @@ export default {
      * @date 2022/1/17 0017
      */
     handleCurrentChange: function(currentPage) {
-      this.pagination.page = currentPage
+      this.selectFrom.page = currentPage
       this.getTable()
     },
     /**
@@ -488,7 +479,7 @@ export default {
      * @date 2022/1/17 0017
      */
     handleSizeChange: function(val) {
-      this.pagination.pageSize = val
+      this.selectFrom.size = val
       this.getTable()
     },
     /**
