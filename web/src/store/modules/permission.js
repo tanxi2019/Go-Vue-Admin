@@ -65,6 +65,7 @@ const actions = {
         const menuTree = data.menuTree
         accessedRoutes = getRoutesFromMenuTree(menuTree)
         commit('SET_ROUTES', accessedRoutes)
+        // console.log(accessedRoutes)
         resolve(accessedRoutes)
       }).catch(err => {
         reject(err)
