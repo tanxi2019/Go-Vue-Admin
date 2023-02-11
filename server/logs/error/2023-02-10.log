@@ -1,0 +1,2 @@
+2023-02-10 14:45:42	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp 182.61.133.217:3306: i/o timeout
+2023-02-10 14:47:58	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: dial tcp 182.61.133.217:3306: i/o timeout

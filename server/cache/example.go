@@ -94,7 +94,9 @@ func (e Example) SetExampleRankCache(company []*redis.Z) error {
 
 // GetExampleRankCache 获取排行榜
 func (e Example) GetExampleRankCache() ([]string, error) {
+	// 排行榜 redis key
 	key := fmt.Sprintf("Rank")
+	// 根据访问量取前12名排行
 	rank, err := global.Redis.ZRevRange(context.Background(), key, 0, 11).Result()
 	if err != nil {
 		return nil, err
@@ -104,6 +106,7 @@ func (e Example) GetExampleRankCache() ([]string, error) {
 
 // SetExampleUserVoteCache 投票id
 func (e Example) SetExampleUserVoteCache(id uint, company []*redis.Z) error {
+	// 活动 key
 	key := fmt.Sprintf("Active:%s", strconv.Itoa(int(id)))
 	err := global.Redis.ZAdd(context.Background(), key, company...).Err()
 	if err != nil {

@@ -2,7 +2,7 @@
   <div class="login">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
       <div class="title-container">
-        <h3 class="title">后台管理系统</h3>
+        <h3 class="title">GO Vue Admin</h3>
       </div>
 
       <el-form-item prop="username">
@@ -175,7 +175,7 @@ export default {
   justify-content: center;
   align-items: center;
   height: 100%;
-  background-color: #283443;
+  background: url('../../assets/img/bg.svg') 50%/cover no-repeat;
   background-size: cover;
 }
 .title {
@@ -184,6 +184,7 @@ export default {
   color: #707070;
 }
 .login-form {
+  border: 1px solid #DCDFE6;
   border-radius: 6px;
   background: #ffffff;
   width: 400px;

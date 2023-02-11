@@ -1,0 +1,24 @@
+2023-01-12 17:32:55	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-01-12 17:32:55	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-01-12 17:32:56	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-01-12 17:32:56	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-01-12 17:32:56	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2023-01-12 17:32:56	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-01-12 17:43:34	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-01-12 17:43:34	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-01-12 17:43:39	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-01-12 17:43:39	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-01-12 17:43:39	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-01-12 17:43:40	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-01-12 17:43:40	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2023-01-12 17:43:40	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-01-12 18:24:39	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:24:41	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:25:16	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:27:26	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:27:28	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:27:30	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:27:32	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 18:29:14	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-01-12 19:05:25	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-01-12 19:05:25	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!

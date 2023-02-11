@@ -67,6 +67,12 @@ func identityHandler(c *gin.Context) interface{} {
 }
 
 // 校验token的正确性, 处理登录逻辑
+// @Tags Base
+// @Summary 用户登录
+// @Produce  application/json
+// @Param data body  reqo.RegisterAndLoginRequest true "用户名, 密码, 验证码"
+// @Success 200 {object} response.Response{data,msg=string} "返回包括用户信息,token,过期时间"
+// @Router /api/base/login [post]
 func login(c *gin.Context) (interface{}, error) {
 	var req reqo.RegisterAndLoginRequest
 	// 请求json绑定

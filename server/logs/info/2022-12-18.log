@@ -1,0 +1,21 @@
+2022-12-18 16:33:20	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-12-18 16:33:20	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-12-18 16:33:20	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-12-18 16:34:31	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-12-18 16:34:31	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-12-18 16:34:31	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-12-18 16:34:31	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-12-18 16:34:31	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-12-18 16:34:31	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2022-12-18 17:15:13	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 验证码错误
+2022-12-18 17:15:37	DEBUG	middleware/auth.go:114	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 验证码错误
+2022-12-18 21:55:42	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2022-12-18 21:55:42	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2022-12-18 22:51:39	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2022-12-18 22:51:39	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2022-12-18 22:51:39	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2022-12-18 22:51:40	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2022-12-18 22:51:40	INFO	router/router.go:45	server/app/router.InitRouter	初始化路由完成！
+2022-12-18 22:51:40	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2022-12-18 23:09:21	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2022-12-18 23:09:21	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!

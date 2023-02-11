@@ -63,7 +63,7 @@ casbin:
 # jwt配置
 jwt:
   # jwt标识
-  realm: gin-admin-template
+  realm: Go-Vue-Admin
   # 服务端密钥
   key: 123456789
   # token过期时间, 小时

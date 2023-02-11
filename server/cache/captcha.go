@@ -32,7 +32,7 @@ func (ca Captcha) SetCaptcha(id string, answer string) error {
 	return nil
 }
 
-// GetCaptchaCache 数字验证码存 get key
+// GetCaptchaCache 数字验证码 get key
 func (ca Captcha) GetCaptcha(id string) string {
 	// 数字验证码 key
 	key := fmt.Sprintf("captcha:%s", id)

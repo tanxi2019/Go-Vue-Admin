@@ -72,7 +72,7 @@
         className: 'bar',
         bar:{
           title: {
-            text: '柱状图'
+            text: ''
           },
           color :['#2f89cf'], // 柱状图颜色配置
           tooltip: {
@@ -139,7 +139,7 @@
           ],
           series: [
             {
-              name: "直接访问",
+              name: "",
               type: "bar",
               barWidth: "45%",
               data: [200, 300, 300, 900, 1500, 1200, 600],
@@ -153,7 +153,7 @@
         classx: 'line',
         line: {
           title: {
-            text: '折线图'
+            text: ''
           },
           xAxis: {
             type: 'category',
@@ -384,7 +384,7 @@
           yAxis: [
             {
               show: true,
-              data: ['HTML5', 'CSS3', 'JavaScript', 'VUE', 'NODE'],
+              data: ['北京', '上海', '广州', '深圳', '武汉'],
               inverse: true,
               axisLine: {
                 show: false
@@ -428,7 +428,7 @@
               name: "条",
               type: "bar",
               yAxisIndex: 0,
-              data:  [70, 34, 60, 78, 69],
+              data:  [70, 69, 60, 78, 34],
               barCategoryGap: 50,
               barWidth: 14.5,
               itemStyle: {

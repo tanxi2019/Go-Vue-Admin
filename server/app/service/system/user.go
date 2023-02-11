@@ -47,7 +47,7 @@ func NewUserService() UserService {
 
 // Login 登录
 func (ud User) Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) {
-	fmt.Println(user.Username)
+	//fmt.Println("用户名称", user)
 	// 根据用户名获取用户(正常状态:用户状态正常)
 	var firstUser system.User
 	err := global.DB.

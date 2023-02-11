@@ -1,5 +1,6 @@
 package code
 
+// 自定义状态码
 const (
 	SUCCESS       = 200
 	ERROR         = 500

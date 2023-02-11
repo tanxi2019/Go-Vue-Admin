@@ -1,0 +1,312 @@
+definitions:
+  reqo.RegisterAndLoginRequest:
+    properties:
+      captchaId:
+        type: string
+      code:
+        type: string
+      password:
+        type: string
+      username:
+        type: string
+    required:
+    - captchaId
+    - code
+    - password
+    - username
+    type: object
+  response.Response:
+    properties:
+      code:
+        type: integer
+      data: {}
+      msg:
+        type: string
+    type: object
+  server_app_model_example.Example:
+    type: object
+info:
+  contact: {}
+  description: This is a sample Server pets
+  title: Swagger API
+  version: 0.0.1
+paths:
+  /api/base/captcha:
+    post:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 生成验证码,返回包括随机数id,base64,验证码长度
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      summary: 生成验证码
+      tags:
+      - Base
+  /api/base/login:
+    post:
+      parameters:
+      - description: 用户名, 密码, 验证码
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/reqo.RegisterAndLoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 返回包括用户信息,token,过期时间
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      summary: 用户登录
+      tags:
+      - Base
+  /api/example/create:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - description: 用户ID
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/server_app_model_example.Example'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 获取单一客户信息,返回包括客户详情
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 创建
+      tags:
+      - Example
+  /api/example/delete:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 删除客户
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 删除
+      tags:
+      - Example
+  /api/example/id:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: id
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 获取单一客户信息,返回包括客户详情
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 单条信息
+      tags:
+      - Example
+  /api/example/list:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: age
+        type: integer
+      - in: query
+        name: description
+        type: string
+      - in: query
+        name: id
+        type: integer
+      - in: query
+        name: mobile
+        type: string
+      - in: query
+        name: name
+        type: string
+      - description: 页码
+        in: query
+        name: page
+        type: integer
+      - in: query
+        name: sex
+        type: integer
+      - description: 每页大小
+        in: query
+        name: size
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 分页获取权限客户列表,返回包括列表,总数,页码,每页数量
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 分页列表
+      tags:
+      - Example
+  /api/example/put:
+    put:
+      consumes:
+      - application/json
+      parameters:
+      - description: 用户ID
+        in: body
+        name: data
+        required: true
+        schema:
+          $ref: '#/definitions/server_app_model_example.Example'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 删除客户
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 更新
+      tags:
+      - Example
+  /api/example/rank:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 排行榜
+      tags:
+      - Example
+  /api/example/remove:
+    delete:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        items:
+          type: integer
+        name: exampleIds
+        type: array
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 删除客户
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 批量删除
+      tags:
+      - Example
+  /api/example/vote:
+    post:
+      consumes:
+      - application/json
+      parameters:
+      - in: query
+        name: id
+        type: integer
+      - in: query
+        name: vid
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 投票
+      tags:
+      - Example
+securityDefinitions:
+  ApiKeyAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

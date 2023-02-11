@@ -16,6 +16,7 @@ type CaptchaReq struct {
 type CaptchaResponse struct {
 	CaptchaId string `json:"captchaId"`
 	PicPath   string `json:"picPath"`
+	Captcha   string `json:"captcha"`
 }
 
 // 1.开辟一个验证码使用的存储空间 3000个 时间5分钟内有效
@@ -34,13 +35,16 @@ func GenCaptcha(ca *CaptchaReq) (result CaptchaResponse, err error) {
 	if err != nil {
 		return result, err
 	}
+	captcha := store.Get(id, true)
+
 	// 5. 数字验证码存redis
 	CaptchaCache := cache.NewCaptchaService()
-	_ = CaptchaCache.SetCaptcha(id, store.Get(id, true))
-
+	_ = CaptchaCache.SetCaptcha(id, captcha)
+	// 返回值
 	result = CaptchaResponse{
 		CaptchaId: id,
 		PicPath:   b64s,
+		Captcha:   captcha,
 	}
 
 	return result, nil

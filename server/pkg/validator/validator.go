@@ -19,7 +19,8 @@ func HandleValidatorError(c *gin.Context, err error) {
 			"msg": err.Error(),
 		})
 	}
-	response.Error(c, http.StatusBadRequest, code.ValidateError, code.GetErrMsg(code.ValidateError), removeTopStruct(errs.Translate(global.Trans)))
+	response.Error(c, http.StatusBadRequest, code.ValidateError, code.GetErrMsg(code.ValidateError),
+		removeTopStruct(errs.Translate(global.Trans)))
 	return
 }
 

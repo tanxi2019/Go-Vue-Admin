@@ -1,8 +1,9 @@
 <template>
   <div class="container">
-    <h2>websocket</h2>
-    <div class="msg">{{ new Date().toLocaleTimeString() }} ：{{ msg }}</div>
-    <el-button @click="handClickTest">Test</el-button>
+    <h2>WebSocket</h2>
+    <div class="msg">心跳包：{{ new Date().toLocaleTimeString() }} ：{{ heartBeat }}</div>
+    <div class="msg">测试返回消息：{{ new Date().toLocaleTimeString() }} ：{{ msg }}</div>
+    <el-button @click="handClickTest">测试连接：hello</el-button>
   </div>
 </template>
 
@@ -12,8 +13,9 @@ export default {
   data() {
     return {
       msg: '',
+      heartBeat:'',
       lockReconnect: false, // 是否真正建立连接
-      timeout: 5 * 1000, // 30秒一次心跳
+      timeout: 5 * 1000, // 5秒一次心跳
       timeoutObj: null, // 心跳心跳倒计时
       serverTimeoutObj: null, // 心跳倒计时
       timeoutNum: null,// 断开 重连倒计时
@@ -25,18 +27,17 @@ export default {
     this.initWebSocket()
   },
   destroyed() {
-    // 页面销毁时关闭长连接，必须是挂载方法。直接调用 this.websocketclose() 不生效
+    // 页面销毁时关闭长连接，必须是挂载方法。直接调用 this.close() 不生效
     this.$websocket.close()
     // 清除时间
     clearTimeout(this.timeoutObj)
     clearTimeout(this.serverTimeoutObj)
-    console.log("222")
   },
 
   methods: {
     //初始化websocket
     initWebSocket() {
-      this.$websocket = new WebSocket(process.env.VUE_APP_WEB_SOCKET)
+      this.$websocket = new WebSocket(process.env.VUE_APP_WEB_SOCKET+"/ws")
       this.$websocket.onopen = this.webSocketOnopen
       this.$websocket.onerror = this.webSocketOnerror
       this.$websocket.onmessage = this.webSocketOnmessage
@@ -47,7 +48,7 @@ export default {
       if (this.$websocket.readyState === 1) {
         console.log('连接成功', '状态：' + this.$websocket.readyState)
         // 开启心跳
-        this.start()
+        // this.start()
       }else {
         this.reconnect()
       }
@@ -61,28 +62,32 @@ export default {
     },
     // 接收消息
     webSocketOnmessage(e) {
-      let obj = e.data
-      console.log(obj)
-      this.msg = obj
-      this.reset()
+      // let obj = e.data
+      // console.log(obj,new Date().toLocaleTimeString())
+      // this.msg = obj
+      // this.reset()
 
-      // let obj = JSON.parse(e.data)[0]
-      // console.log(obj)
-      // switch (obj.type) {
-      //   case 'heartbeat':
-      //     //收到服务器信息，心跳重置
-      //     console.log('接收到的服务器消息：', obj.msg)
-      //     this.reset()
-      //     break
-      //   case 'good':
-      //     this.msg = obj
-      //     console.log('接收到的服务器消息：', obj.msg)
-      // }
+      let obj = JSON.parse(e.data)
+      console.log(obj)
+      switch (obj.type) {
+        case 'heartBeat':
+          //收到服务器信息，心跳重置
+          this.heartBeat = obj
+          console.log('接收到的服务器消息：', obj.msg)
+          // this.reset()
+          break
+        case 'hello':
+          this.msg = obj
+          console.log('接收到的服务器消息：', obj.msg)
+      }
     },
     // 发送消息
     handClickTest:function() {
       if (this.$websocket.readyState === 1) {
-        this.$websocket.send('123')
+        let data = {
+          type:"hello"
+        }
+        this.$websocket.send(JSON.stringify(data))
       }
     },
     // 关闭
@@ -124,7 +129,10 @@ export default {
         // 这里发送一个心跳，后端收到后，返回一个心跳消息，
         if (this.$websocket.readyState === 1) {
           // 如果连接正常
-          this.$websocket.send('heartBeat')
+          let data = {
+            type: "heartBeat"
+          }
+          this.$websocket.send(JSON.stringify(data))
         } else {
           // 断线重连
           this.reconnect()

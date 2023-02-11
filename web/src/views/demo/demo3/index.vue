@@ -17,7 +17,9 @@
         <el-table-column show-overflow-tooltip sortable prop="name" label="姓名"/>
         <el-table-column show-overflow-tooltip sortable prop="sex" label="性别">
           <template slot-scope="scope">
-            <el-tag size="small">{{ scope.row.sex === 2 ? '女' : '男' }}</el-tag>
+            <i class="el-icon-male" v-if="scope.row.sex === 1"></i>
+            <i class="el-icon-female" v-else-if="scope.row.sex === 2"></i>
+            <i class="el-icon-female" v-else></i>
           </template>
         </el-table-column>
         <el-table-column show-overflow-tooltip sortable prop="age" label="年龄"/>

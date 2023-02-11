@@ -4,6 +4,13 @@ import (
 	"server/initialize"
 )
 
+// @title Swagger API
+// @version 0.0.1
+// @description This is a sample Server pets
+// @securityDefinitions.apikey ApiKeyAuth
+// @in header
+// @name Authorization
+// @BasePath /
 func main() {
 	initialize.InitConfig()         // 加载配置文件到全局配置结构体
 	initialize.InitLogger()         // 初始化日志

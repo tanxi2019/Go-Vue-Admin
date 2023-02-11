@@ -37,7 +37,14 @@ func NewExampleApi() ExampleService {
 	return ExampleApiService{Example: service.NewExampleService()}
 }
 
-// PostExample 创建
+// @Tags Example
+// @Summary 创建
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data body model.Example true "用户ID"
+// @Success 200 {object} response.Response{data,msg=string} "获取单一客户信息,返回包括客户详情"
+// @Router /api/example/create [post]
 func (es ExampleApiService) PostExample(c *gin.Context) {
 	example := new(model.Example)
 	// 参数绑定
@@ -58,7 +65,14 @@ func (es ExampleApiService) PostExample(c *gin.Context) {
 	return
 }
 
-// GetExample 单条数据
+// @Tags Example
+// @Summary 单条信息
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data query reqo.ExampleId true "用户ID"
+// @Success 200 {object} response.Response{data,msg=string} "获取单一客户信息,返回包括客户详情"
+// @Router /api/example/id [get]
 func (es ExampleApiService) GetExample(c *gin.Context) {
 	ExampleId := new(reqo.ExampleId)
 	if err := c.ShouldBindQuery(&ExampleId); err != nil {
@@ -79,8 +93,16 @@ func (es ExampleApiService) GetExample(c *gin.Context) {
 	return
 }
 
-// GetExampleList 列表
+// @Tags Example
+// @Summary 分页列表
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data query reqo.PageList true "页码, 每页大小"
+// @Success 200 {object} response.Response{data,msg=string} "分页获取权限客户列表,返回包括列表,总数,页码,每页数量"
+// @Router /api/example/list [get]
 func (es ExampleApiService) GetExampleList(c *gin.Context) {
+
 	var pageList reqo.PageList
 	// 参数绑定
 	if err := c.ShouldBindQuery(&pageList); err != nil {
@@ -106,7 +128,14 @@ func (es ExampleApiService) GetExampleList(c *gin.Context) {
 	return
 }
 
-// PutExample 更新
+// @Tags Example
+// @Summary 更新
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data body model.Example true "用户ID"
+// @Success 200 {object} response.Response{data,msg=string} "删除客户"
+// @Router /api/example/put [put]
 func (es ExampleApiService) PutExample(c *gin.Context) {
 	example := new(model.Example)
 	// 参数绑定
@@ -127,7 +156,14 @@ func (es ExampleApiService) PutExample(c *gin.Context) {
 	return
 }
 
-// DeleteExample 删除
+// @Tags Example
+// @Summary 删除
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data query reqo.ExampleId true "用户ID"
+// @Success 200 {object} response.Response{msg=string} "删除客户"
+// @Router /api/example/delete [delete]
 func (es ExampleApiService) DeleteExample(c *gin.Context) {
 	DeleteExampleID := new(reqo.ExampleId)
 	if err := c.ShouldBind(&DeleteExampleID); err != nil {
@@ -147,7 +183,14 @@ func (es ExampleApiService) DeleteExample(c *gin.Context) {
 	return
 }
 
-// DeleteExampleAll 批量删除
+// @Tags Example
+// @Summary 批量删除
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data query reqo.ExampleIds true "用户ID"
+// @Success 200 {object} response.Response{data,msg=string} "删除客户"
+// @Router /api/example/remove [delete]
 func (es ExampleApiService) DeleteExampleAll(c *gin.Context) {
 	example := new(reqo.ExampleIds)
 	// 参数绑定
@@ -168,15 +211,14 @@ func (es ExampleApiService) DeleteExampleAll(c *gin.Context) {
 	return
 }
 
-// GetExampleRank 排行榜
+// @Tags Example
+// @Summary 排行榜
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Success 200 {object} response.Response{data,msg=string}
+// @Router /api/example/rank [get]
 func (es ExampleApiService) GetExampleRank(c *gin.Context) {
-	ExampleId := new(reqo.ExampleId)
-	if err := c.ShouldBindQuery(&ExampleId); err != nil {
-		// 参数校验
-		validator.HandleValidatorError(c, err)
-		return
-	}
-
 	// 服务层数据操作
 	data, err := es.Example.GetExampleRankList()
 	if err != nil {
@@ -195,7 +237,14 @@ func (es ExampleApiService) GetExampleRank(c *gin.Context) {
 	return
 }
 
-// GetExampleVote 投票
+// @Tags Example
+// @Summary 投票
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Param data query reqo.ActiveId true "用户ID，活动ID"
+// @Success 200 {object} response.Response{data,msg=string}
+// @Router /api/example/vote [post]
 func (es ExampleApiService) GetExampleVote(c *gin.Context) {
 	ActiveId := new(reqo.ActiveId)
 	if err := c.ShouldBind(&ActiveId); err != nil {
