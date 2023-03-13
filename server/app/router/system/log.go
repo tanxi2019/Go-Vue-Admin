@@ -9,15 +9,15 @@ import (
 )
 
 func InitOperationLogRouter(r *gin.RouterGroup) gin.IRouter {
-	log := system.NewLogApi()
+	logApi := system.NewLogApi()
 	router := r.Group("/log")
 	// 开启jwt认证中间件
 	router.Use(global.AuthMiddleware.MiddlewareFunc())
 	// 开启casbin鉴权中间件
 	router.Use(middleware.CasbinMiddleware())
 	{
-		router.GET("/operation/list", log.GetOperationLogs)
-		router.DELETE("/operation/delete/batch", log.BatchDeleteOperationLogByIds)
+		router.GET("/operation/list", logApi.GetOperationLogs)
+		router.DELETE("/operation/delete/batch", logApi.BatchDeleteOperationLogByIds)
 	}
 	return r
 }

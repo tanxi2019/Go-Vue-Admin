@@ -3,10 +3,10 @@ package example
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"server/app/cache"
 	model "server/app/model/example"
 	"server/app/model/example/reqo"
 	service "server/app/service/example"
-	"server/cache"
 	"server/pkg/code"
 	"server/pkg/response"
 	"server/pkg/validator"
@@ -15,7 +15,7 @@ import (
 	"strconv"
 )
 
-//ExampleService
+// ExampleService
 type ExampleService interface {
 	PostExample(c *gin.Context)      // 创建
 	GetExample(c *gin.Context)       // 单条数据
@@ -32,7 +32,7 @@ type ExampleApiService struct {
 	Example service.ExampleService
 }
 
-// NewExampleApi 创建构造函数简单工厂模式
+// NewExampleApi 创建构造函数工厂模式
 func NewExampleApi() ExampleService {
 	return ExampleApiService{Example: service.NewExampleService()}
 }

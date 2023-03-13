@@ -25,7 +25,7 @@ type UserApi interface {
 	BatchDeleteUserByIds(c *gin.Context) // 批量删除用户
 }
 
-// UserService 服务层数据处理
+// UserApiService UserService 服务层数据处理
 type UserApiService struct {
 	User service.UserService
 }

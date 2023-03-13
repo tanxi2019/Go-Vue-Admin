@@ -7,15 +7,15 @@ import (
 
 // InitUploadRouter 用户案例模块
 func InitUploadRouter(r *gin.RouterGroup) gin.IRouter {
-	uploadRouter := system.NewUploadApi()
+	uploadApi := system.NewUploadApi()
 	router := r.Group("/upload")
 	////开启jwt认证中间件
 	//router.Use(global.AuthMiddleware.MiddlewareFunc())
 	//// 开启casbin鉴权中间件
 	//router.Use(middleware.CasbinMiddleware())
 	{
-		router.POST("/file", uploadRouter.UploadFile)      // 创建
-		router.POST("/qiniu", uploadRouter.UploadQiniuYun) // 创建
+		router.POST("/file", uploadApi.UploadFile)      // 创建
+		router.POST("/qiniu", uploadApi.UploadQiniuYun) // 创建
 	}
 
 	return r

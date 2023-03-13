@@ -1,0 +1,172 @@
+2023-03-11 01:55:53	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 01:55:53	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 01:55:54	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 01:55:54	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 01:55:54	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 01:55:54	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 01:57:21	DEBUG	middleware/auth.go:120	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: 验证码错误
+2023-03-11 02:01:58	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 02:01:58	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 02:02:02	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 02:02:02	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 02:02:02	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 02:02:03	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 02:02:03	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 02:02:03	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 02:10:04	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 02:10:04	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 02:14:28	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 02:14:28	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 02:14:47	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 02:14:47	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 02:14:47	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 02:14:47	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 02:14:47	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 02:14:47	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 02:15:47	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 02:15:47	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 02:15:50	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 02:15:50	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 02:15:50	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 02:15:50	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 02:15:50	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 02:15:50	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 03:19:58	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 03:19:58	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 14:17:06	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 14:17:06	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 14:17:06	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 14:17:06	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 14:17:06	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 14:17:06	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:29:36	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:29:36	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:29:42	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:29:42	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:29:42	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:29:42	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:29:42	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:29:42	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:30:57	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:30:57	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:31:01	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:31:01	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:31:01	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:31:01	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:31:01	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:31:01	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:33:44	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:33:44	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:33:47	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:33:47	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:33:47	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:33:47	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:33:47	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:33:47	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:35:42	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:35:42	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:35:46	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:35:46	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:35:46	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:35:46	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:35:46	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:35:46	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:36:07	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:36:07	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:36:10	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:36:10	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:36:10	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:36:10	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:36:10	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:36:10	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:37:05	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:37:05	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:37:09	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:37:09	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:37:09	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:37:09	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:37:09	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:37:09	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:43:51	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:43:51	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:43:55	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:43:55	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:43:55	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:43:55	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:43:55	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:43:55	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 15:44:13	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 15:44:13	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 15:44:16	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 15:44:16	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 15:44:16	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 15:44:16	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 15:44:16	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 15:44:16	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:02:54	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 16:02:54	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 16:02:58	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:02:58	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:02:58	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:02:58	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:02:58	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:02:58	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:03:31	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 16:03:31	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 16:03:45	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:03:45	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:03:45	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:03:45	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:03:45	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:03:45	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:04:32	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:04:32	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:04:32	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:04:32	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:04:32	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:04:32	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:05:07	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 16:05:07	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 16:05:11	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:05:11	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:05:11	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:05:11	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:05:11	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:05:11	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:08:33	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 16:08:33	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 16:08:37	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:08:37	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:08:37	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:08:37	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:08:37	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:08:37	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:08:43	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:08:43	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:08:43	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:08:43	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:08:43	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:08:43	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:09:09	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 16:09:09	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 16:09:12	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:09:12	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:09:12	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:09:12	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:09:12	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:09:12	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:09:35	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 16:09:35	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!
+2023-03-11 16:09:38	INFO	initialize/logger.go:106	server/initialize.InitLogger	初始化zap日志完成!
+2023-03-11 16:09:38	INFO	initialize/redis.go:22	server/initialize.InitRedis	初始化redis数据库完成!
+2023-03-11 16:09:38	INFO	initialize/mysql.go:62	server/initialize.InitMysql	初始化mysql数据库完成!
+2023-03-11 16:09:38	INFO	initialize/casbin.go:20	server/initialize.InitCasbinEnforcer	初始化Casbin完成!
+2023-03-11 16:09:38	INFO	router/router.go:49	server/app/router.InitRouter	初始化路由完成！
+2023-03-11 16:09:38	INFO	initialize/server.go:46	server/initialize.InitRun	服务启动完成
+2023-03-11 16:11:50	DEBUG	middleware/auth.go:120	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-03-11 16:29:19	DEBUG	middleware/auth.go:120	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-03-11 16:29:30	DEBUG	middleware/auth.go:120	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: signature is invalid
+2023-03-11 16:29:35	DEBUG	middleware/auth.go:120	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-03-11 16:30:29	DEBUG	middleware/auth.go:120	server/middleware.unauthorized	JWT认证失败, 错误码: 401, 错误信息: cookie token is empty
+2023-03-11 17:34:21	INFO	initialize/server.go:55	server/initialize.InitRun	Shutting down server...
+2023-03-11 17:34:21	INFO	initialize/server.go:65	server/initialize.InitRun	Server exiting!

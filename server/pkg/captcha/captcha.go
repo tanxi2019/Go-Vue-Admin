@@ -2,8 +2,7 @@ package captcha
 
 import (
 	"github.com/mojocn/base64Captcha"
-	"server/cache"
-	"time"
+	"server/app/cache"
 )
 
 //CaptchaReq
@@ -19,9 +18,6 @@ type CaptchaResponse struct {
 	Captcha   string `json:"captcha"`
 }
 
-// 1.开辟一个验证码使用的存储空间 3000个 时间5分钟内有效
-var store = base64Captcha.NewMemoryStore(3000, 5*time.Minute)
-
 // 生成验证码
 func GenCaptcha(ca *CaptchaReq) (result CaptchaResponse, err error) {
 	// 2.创建验证码驱动 五种：dight 数字验证码；audio 语音验证码；string 字符验证码；math 数学验证码(加减乘除)；chinese中文验证码-有bug
@@ -29,13 +25,13 @@ func GenCaptcha(ca *CaptchaReq) (result CaptchaResponse, err error) {
 	driver := base64Captcha.NewDriverDigit(ca.ImgHeight, ca.ImgWidth, ca.KeyLong, 0.7, 80)
 	//base64Captcha.NewDriverMath()
 	// 3.生成验证码并保存至store
-	cp := base64Captcha.NewCaptcha(driver, store)
+	cp := base64Captcha.NewCaptcha(driver, base64Captcha.DefaultMemStore)
 	// 4.生成base64图像及id
 	id, b64s, err := cp.Generate()
 	if err != nil {
 		return result, err
 	}
-	captcha := store.Get(id, true)
+	captcha := base64Captcha.DefaultMemStore.Get(id, true)
 
 	// 5. 数字验证码存redis
 	CaptchaCache := cache.NewCaptchaService()
@@ -50,10 +46,7 @@ func GenCaptcha(ca *CaptchaReq) (result CaptchaResponse, err error) {
 	return result, nil
 }
 
-// 验证验证码 原验证码的id，待验证的输入字符串answer
+// VerifyCaptcha 验证验证码 原验证码的id，待验证的输入字符串answer
 func VerifyCaptcha(id string, answer string) bool {
-	if id == "" || answer == "" {
-		return false
-	}
-	return store.Verify(id, answer, true)
+	return base64Captcha.DefaultMemStore.Verify(id, answer, true)
 }

@@ -45,7 +45,7 @@
       >
         <el-table-column show-overflow-tooltip sortable prop="path" label="访问路径" />
         <el-table-column show-overflow-tooltip sortable prop="category" label="所属类别" />
-        <el-table-column show-overflow-tooltip sortable prop="method" label="请求方式" align="center">
+        <el-table-column show-overflow-tooltip sortable prop="method" label="请求方式">
           <template slot-scope="scope">
             <el-tag size="small" :type="scope.row.method | methodTagFilter" disable-transitions>{{ scope.row.method }}</el-tag>
           </template>

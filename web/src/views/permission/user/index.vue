@@ -129,7 +129,7 @@ export default {
   inject: ['reload'],
   components: { Button, Table, Dialog, Pagination },
   data() {
-    var checkPhone = (rule, value, callback) => {
+    const checkPhone = (rule, value, callback) => {
       if (!value) {
         return callback(new Error('手机号不能为空'))
       } else {

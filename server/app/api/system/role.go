@@ -227,6 +227,7 @@ func (rs RoleApiService) GetRoleMenusById(c *gin.Context) {
 		return
 	}
 	menus, err := rs.Role.GetRoleMenusById(uint(roleId))
+	fmt.Println(menus[0])
 	if err != nil {
 		// 错误返回
 		response.Error(c, http.StatusBadRequest, code.ServerErr, "获取角色的权限菜单失败: "+err.Error(), nil)

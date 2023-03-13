@@ -33,24 +33,24 @@
         </el-table-column>
         <el-table-column show-overflow-tooltip prop="path" label="路由地址" />
         <el-table-column show-overflow-tooltip prop="component" label="组件路径" />
-        <el-table-column show-overflow-tooltip prop="redirect" label="重定向" />
-        <el-table-column show-overflow-tooltip prop="sort" label="排序" align="center" width="80" />
-        <el-table-column show-overflow-tooltip prop="status" label="禁用" align="center" width="80">
+<!--        <el-table-column show-overflow-tooltip prop="redirect" label="重定向" />-->
+        <el-table-column show-overflow-tooltip prop="sort" label="排序"  />
+        <el-table-column show-overflow-tooltip prop="status" label="禁用" >
           <template slot-scope="scope">
             <el-tag size="small" :type="scope.row.status === 1 ? 'success':'danger'">{{ scope.row.status === 1 ? '否':'是' }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column show-overflow-tooltip prop="hidden" label="隐藏" align="center" width="80">
+        <el-table-column show-overflow-tooltip prop="hidden" label="隐藏">
           <template slot-scope="scope">
             <el-tag size="small" :type="scope.row.hidden === 1 ? 'danger':'success'">{{ scope.row.hidden === 1 ? '是':'否' }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column show-overflow-tooltip prop="noCache" label="缓存" align="center" width="80">
+        <el-table-column show-overflow-tooltip prop="noCache" label="缓存" >
           <template slot-scope="scope">
             <el-tag size="small" :type="scope.row.noCache === 1 ? 'danger':'success'">{{ scope.row.noCache === 1 ? '否':'是' }}</el-tag>
           </template>
         </el-table-column>
-        <el-table-column show-overflow-tooltip prop="activeMenu" label="高亮菜单" />
+<!--        <el-table-column show-overflow-tooltip prop="activeMenu" label="高亮菜单" />-->
         <el-table-column fixed="right" label="操作" align="center" width="250">
           <template slot-scope="scope">
             <el-tooltip content="编辑" effect="dark" placement="top">

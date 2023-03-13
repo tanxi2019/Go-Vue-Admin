@@ -28,7 +28,7 @@ func NewApiService() ApiService {
 	return Api{}
 }
 
-// 获取接口列表
+// GetApis 获取接口列表
 func (a Api) GetApis(req *reqo.ApiListRequest) ([]*system.Api, int64, error) {
 	var list []*system.Api
 	db := global.DB.Model(&system.Api{}).Order("created_at DESC")
@@ -67,14 +67,14 @@ func (a Api) GetApis(req *reqo.ApiListRequest) ([]*system.Api, int64, error) {
 	return list, total, err
 }
 
-// 根据接口ID获取接口列表
+// GetApisById 根据接口ID获取接口列表
 func (a Api) GetApisById(apiIds []uint) ([]*system.Api, error) {
 	var apis []*system.Api
 	err := global.DB.Where("id IN (?)", apiIds).Find(&apis).Error
 	return apis, err
 }
 
-// 获取接口树(按接口Category字段分类)
+// GetApiTree 获取接口树(按接口Category字段分类)
 func (a Api) GetApiTree() ([]*repo.ApiTreeResp, error) {
 	var apiList []*system.Api
 	err := global.DB.Order("category").Order("created_at").Find(&apiList).Error
@@ -105,13 +105,13 @@ func (a Api) GetApiTree() ([]*repo.ApiTreeResp, error) {
 	return apiTree, err
 }
 
-// 创建接口
+// CreateApi 创建接口
 func (a Api) CreateApi(api *system.Api) error {
 	err := global.DB.Create(api).Error
 	return err
 }
 
-// 更新接口
+// UpdateApiById 更新接口
 func (a Api) UpdateApiById(apiId uint, api *system.Api) error {
 	// 根据id获取接口信息
 	var oldApi system.Api
@@ -154,7 +154,7 @@ func (a Api) UpdateApiById(apiId uint, api *system.Api) error {
 	return err
 }
 
-// 批量删除接口
+// BatchDeleteApiByIds 批量删除接口
 func (a Api) BatchDeleteApiByIds(apiIds []uint) error {
 
 	apis, err := a.GetApisById(apiIds)
@@ -188,7 +188,7 @@ func (a Api) BatchDeleteApiByIds(apiIds []uint) error {
 	return err
 }
 
-// 根据接口路径和请求方式获取接口描述
+// GetApiDescByPath 根据接口路径和请求方式获取接口描述
 func (a Api) GetApiDescByPath(path string, method string) (string, error) {
 	var api system.Api
 	err := global.DB.Where("path = ?", path).Where("method = ?", method).First(&api).Error

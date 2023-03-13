@@ -1,0 +1,1 @@
+2023-03-11 02:14:28	PANIC	initialize/mysql.go:37	server/initialize.InitMysql	初始化mysql数据库异常: Error 1049: Unknown database 'gin-vue-admin'

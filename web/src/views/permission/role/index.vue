@@ -53,7 +53,8 @@
             @time: 2021/12/22 0022
             -->
             <Button :but="Edit" @but="update(scope.row)"/>
-            <el-button size="mini" icon="el-icon-key" type="text" @click="updatePermission(scope.row.ID)">权限</el-button>
+            <el-button size="mini" icon="el-icon-key" type="text" @click="updateMenuPermission(scope.row.ID)">菜单权限</el-button>
+            <el-button size="mini" icon="el-icon-key" type="text" @click="updateApiPermission(scope.row.ID)">数据权限</el-button>
             <Button :but="Delete" @but="singleDelete(scope.row.ID)"/>
 
           </template>
@@ -69,8 +70,7 @@
     </div>
 
 
-
-      <el-dialog :title="dialogFormTitle" :visible.sync="dialogFormVisible" width="580px">
+      <el-dialog :title="dialogFormTitle" :visible.sync="dialogFormVisible" width="600px">
         <el-form ref="dialogForm" :inline="true" size="small" :model="dialogFormData" :rules="dialogFormRules" label-width="100px">
           <el-form-item label="角色名称" prop="name">
             <el-input v-model.trim="dialogFormData.name" placeholder="角色名称" style="width: 420px" />
@@ -96,8 +96,8 @@
           <el-button size="mini" :loading="submitLoading" type="primary" @click="submitForm()">确 定</el-button>
         </div>
       </el-dialog>
-
-      <el-dialog title="修改权限" :visible.sync="permsDialogVisible" width="580px" custom-class="perms-dialog">
+<!--菜单权限-->
+      <el-dialog title="修改权限" :visible.sync="permsDialogVisible" width="600px" custom-class="perms-dialog">
         <el-tabs>
           <el-tab-pane>
             <span slot="label"> 菜单权限</span>
@@ -111,25 +111,33 @@
             />
 
           </el-tab-pane>
-
-          <el-tab-pane>
-            <span slot="label">数据权限</span>
-            <el-tree
-              ref="roleApiTree"
-              :props="{children: 'children',label: 'desc'}"
-              :data="apiTree"
-              show-checkbox
-              node-key="ID"
-              :default-checked-keys="defaultCheckedRoleApi"
-            />
-
-          </el-tab-pane>
         </el-tabs>
         <div slot="footer">
-          <el-button size="mini" :loading="permissionLoading" @click="cancelPermissionForm()">取 消</el-button>
-          <el-button size="mini" type="primary" @click="submitPermissionForm()">确 定</el-button>
+          <el-button size="mini" :loading="permissionLoading" @click=" permsDialogVisible = false">取 消</el-button>
+          <el-button size="mini" type="primary" @click="updateRoleMenusById">确 定</el-button>
         </div>
       </el-dialog>
+<!--数据权限-->
+    <el-dialog title="修改权限" :visible.sync="permsApiDialogVisible" width="580px" custom-class="perms-dialog">
+      <el-tabs>
+        <el-tab-pane>
+                    <span slot="label">数据权限</span>
+                    <el-tree
+                      ref="roleApiTree"
+                      :props="{children: 'children',label: 'desc'}"
+                      :data="apiTree"
+                      show-checkbox
+                      node-key="ID"
+                      :default-checked-keys="defaultCheckedRoleApi"
+                    />
+
+                  </el-tab-pane>
+      </el-tabs>
+      <div slot="footer">
+        <el-button size="mini" :loading="permissionApiLoading" @click="permsApiDialogVisible = false">取 消</el-button>
+        <el-button size="mini" type="primary" @click="updateRoleApisById">确 定</el-button>
+      </div>
+    </el-dialog>
 
   </div>
 </template>
@@ -307,11 +315,14 @@ export default {
       // 表格多选
       multipleSelection: [],
 
-      // 修改权限
+      // 修改菜单权限
       permsDialogVisible: false,
       permissionLoading: false,
       menuTree: [],
       defaultCheckedRoleMenu: [],
+      // 修改数据权限
+      permsApiDialogVisible: false,
+      permissionApiLoading: false,
       apiTree: [],
       defaultCheckedRoleApi: [],
 
@@ -416,7 +427,7 @@ export default {
         name: '',
         keyword: '',
         status: 1,
-        sort: 999,
+        sort: 1,
         desc: ''
       }
     },
@@ -482,7 +493,7 @@ export default {
           this.loading = false
         }
 
-        this.getTableData()
+        await this.getTableData()
         this.$message({
           showClose: true,
           message: message,
@@ -496,13 +507,18 @@ export default {
       })
     },
 
-    // 修改权限按钮
-    async updatePermission(roleId) {
+    // 修改菜单权限
+    async updateMenuPermission(roleId) {
       this.roleId = roleId
       this.permsDialogVisible = true
       await this.getMenuTree()
-      await this.getApiTree()
       await this.getRoleMenusById(roleId)
+    },
+    // 修改数据权限
+    async updateApiPermission(roleId) {
+      this.roleId = roleId
+      this.permsApiDialogVisible = true
+      await this.getApiTree()
       await this.getRoleApisById(roleId)
     },
 
@@ -581,38 +597,33 @@ export default {
       this.permsDialogVisible = false
       this.$message({
         showClose: true,
-        message: '更新角色菜单成功',
+        message: '成功',
         type: 'success'
       })
     },
 
     // 修改角色接口
     async updateRoleApisById() {
-      this.permissionLoading = true
+      this.permissionApiLoading = true
       const ids = this.$refs.roleApiTree.getCheckedKeys(true)
       try {
         await updateRoleApisById(this.roleId, { apiIds: ids })
       } finally {
-        this.permissionLoading = false
+        this.permissionApiLoading = false
       }
 
-      this.permsDialogVisible = false
+      this.permsApiDialogVisible = false
       this.$message({
         showClose: true,
-        message: '更新角色接口成功',
+        message: '成功',
         type: 'success'
       })
-    },
-
-    // 确定修改角色权限
-    submitPermissionForm() {
-      this.updateRoleMenusById()
-      this.updateRoleApisById()
     },
 
     // 取消修改角色权限
     cancelPermissionForm() {
       this.permsDialogVisible = false
+      this.permsApiDialogVisible = false
     },
 
     // 分页

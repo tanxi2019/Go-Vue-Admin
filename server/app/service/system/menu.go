@@ -8,12 +8,11 @@ import (
 )
 
 type MenuService interface {
-	GetMenus() ([]*system.Menu, error)                   // 获取菜单列表
-	GetMenuTree() ([]*system.Menu, error)                // 获取菜单树
-	CreateMenu(menu *system.Menu) error                  // 创建菜单
-	UpdateMenuById(menuId uint, menu *system.Menu) error // 更新菜单
-	BatchDeleteMenuByIds(menuIds []uint) error           // 批量删除菜单
-
+	GetMenus() ([]*system.Menu, error)                           // 获取菜单列表
+	GetMenuTree() ([]*system.Menu, error)                        // 获取菜单树
+	CreateMenu(menu *system.Menu) error                          // 创建菜单
+	UpdateMenuById(menuId uint, menu *system.Menu) error         // 更新菜单
+	BatchDeleteMenuByIds(menuIds []uint) error                   // 批量删除菜单
 	GetUserMenusByUserId(userId uint) ([]*system.Menu, error)    // 根据用户ID获取用户的权限(可访问)菜单列表
 	GetUserMenuTreeByUserId(userId uint) ([]*system.Menu, error) // 根据用户ID获取用户的权限(可访问)菜单树
 }
@@ -39,6 +38,7 @@ func (m Menu) GetMenuTree() ([]*system.Menu, error) {
 	return GenMenuTree(0, menus), err
 }
 
+// GenMenuTree 递归
 func GenMenuTree(parentId uint, menus []*system.Menu) []*system.Menu {
 	tree := make([]*system.Menu, 0)
 

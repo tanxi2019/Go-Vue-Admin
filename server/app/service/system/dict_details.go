@@ -33,16 +33,17 @@ func (ds DictDetails) GetDictDetailsList(pageInfo *reqo.DictDetailList) (data []
 	// gorm 获获列表数据
 	limit := pageInfo.Size
 	offset := pageInfo.Size * (pageInfo.Page - 1)
+	KeyWord := pageInfo.KeyWord
 
 	// sql语句
 	sql := "SELECT * FROM dict_detail WHERE dict_id IN ( " +
 		"SELECT id FROM dict WHERE key_word = ? and status IS True  ) and deleted_at IS NULL order by sort limit ?,?;"
 
-	if err = global.DB.Raw(sql, pageInfo.KeyWord, offset, limit).Scan(&data).Error; err != nil {
+	if err = global.DB.Raw(sql, KeyWord, offset, limit).Scan(&data).Error; err != nil {
 		return data, 0, err
 	}
 
-	db := global.DB.Debug().Order("sort asc").Model(&system.DictDetail{})
+	db := global.DB.Order("sort asc").Model(&system.DictDetail{})
 
 	err = db.Count(&total).Error
 	if err != nil {

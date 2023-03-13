@@ -2,7 +2,7 @@
   <div class="login">
     <el-form ref="loginForm" :model="loginForm" :rules="loginRules" class="login-form" autocomplete="on" label-position="left">
       <div class="title-container">
-        <h3 class="title">GO Vue Admin</h3>
+        <h3 class="title">Gin Admin</h3>
       </div>
 
       <el-form-item prop="username">

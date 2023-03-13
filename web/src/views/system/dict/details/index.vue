@@ -214,7 +214,7 @@ export default {
         label: '',
         value: '',
         desc: '',
-        sort: 999,
+        sort: 1,
       },
       // 编辑表单
       editForm: {

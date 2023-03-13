@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Go Vue Admin',
+  title: 'Gin Admin',
 
   /**
    * @type {boolean} true | false

@@ -3,13 +3,13 @@ package router
 import (
 	"fmt"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"server/app/api/socket"
 	"server/app/router/example"
 	"server/app/router/system"
 	"server/config"
 	_ "server/docs"
 	"server/global"
 	"server/middleware"
+	"server/pkg/socket"
 	"time"
 
 	"github.com/gin-gonic/gin"

@@ -3,9 +3,9 @@ package system
 import (
 	"errors"
 	"fmt"
+	redis "server/app/cache"
 	"server/app/model/system"
 	"server/app/model/system/reqo"
-	redis "server/cache"
 	"server/global"
 	"server/pkg/bcrypt"
 	"strings"
@@ -17,22 +17,19 @@ import (
 )
 
 type UserService interface {
-	Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) // 登录
-	ChangePwd(username string, newPasswd string) error              // 更新密码
-
-	CreateUser(user *system.User) error                                // 创建用户
-	GetUserById(id uint) (system.User, error)                          // 获取单个用户
-	GetUsers(req *reqo.UserListRequest) ([]*system.User, int64, error) // 获取用户列表
-	UpdateUser(user *system.User) error                                // 更新用户
-	BatchDeleteUserByIds(ids []uint) error                             // 批量删除
-
+	Login(user *reqo.RegisterAndLoginRequest) (*system.User, error)      // 登录
+	ChangePwd(username string, newPasswd string) error                   // 更新密码
+	CreateUser(user *system.User) error                                  // 创建用户
+	GetUserById(id uint) (system.User, error)                            // 获取单个用户
+	GetUsers(req *reqo.UserListRequest) ([]*system.User, int64, error)   // 获取用户列表
+	UpdateUser(user *system.User) error                                  // 更新用户
+	BatchDeleteUserByIds(ids []uint) error                               // 批量删除
 	GetCurrentUser(c *gin.Context) (system.User, error)                  // 获取当前登录用户信息
 	GetCurrentUserMinRoleSort(c *gin.Context) (uint, system.User, error) // 获取当前用户角色排序最小值（最高等级角色）以及当前用户信息
 	GetUserMinRoleSortsByIds(ids []uint) ([]int, error)                  // 根据用户ID获取用户角色排序最小值
-
-	SetUserInfoCache(username string, user system.User) // 设置用户信息缓存
-	UpdateUserInfoCacheByRoleId(roleId uint) error      // 根据角色ID更新拥有该角色的用户信息缓存
-	ClearUserInfoCache()                                // 清理所有用户信息缓存
+	SetUserInfoCache(username string, user system.User)                  // 设置用户信息缓存
+	UpdateUserInfoCacheByRoleId(roleId uint) error                       // 根据角色ID更新拥有该角色的用户信息缓存
+	ClearUserInfoCache()                                                 // 清理所有用户信息缓存
 }
 
 type User struct{}
@@ -47,7 +44,6 @@ func NewUserService() UserService {
 
 // Login 登录
 func (ud User) Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) {
-	//fmt.Println("用户名称", user)
 	// 根据用户名获取用户(正常状态:用户状态正常)
 	var firstUser system.User
 	err := global.DB.
@@ -84,13 +80,14 @@ func (ud User) Login(user *reqo.RegisterAndLoginRequest) (*system.User, error) {
 	if err != nil {
 		return &firstUser, errors.New("密码错误")
 	}
+
 	// 获取 redis数字验证码
 	CaptchaCache := redis.NewCaptchaService()
-	captcha := CaptchaCache.GetCaptcha(user.CaptchaId)
-	if captcha == "" {
+	code := CaptchaCache.GetCaptcha(user.CaptchaId)
+	if code == "" {
 		return nil, errors.New("验证码过期")
 	}
-	if user.Code != captcha {
+	if user.Code != code {
 		return nil, errors.New("验证码错误")
 	}
 	return &firstUser, nil

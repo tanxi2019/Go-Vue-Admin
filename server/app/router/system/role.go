@@ -9,21 +9,21 @@ import (
 )
 
 func InitRoleRouter(r *gin.RouterGroup) gin.IRouter {
-	role := system.NewRoleApi()
+	roleApi := system.NewRoleApi()
 	router := r.Group("/role")
 	// 开启jwt认证中间件
 	router.Use(global.AuthMiddleware.MiddlewareFunc())
 	// 开启casbin鉴权中间件
 	router.Use(middleware.CasbinMiddleware())
 	{
-		router.GET("/list", role.GetRoles)
-		router.POST("/create", role.CreateRole)
-		router.PATCH("/update/:roleId", role.UpdateRoleById)
-		router.GET("/menus/get/:roleId", role.GetRoleMenusById)
-		router.PATCH("/menus/update/:roleId", role.UpdateRoleMenusById)
-		router.GET("/apis/get/:roleId", role.GetRoleApisById)
-		router.PATCH("/apis/update/:roleId", role.UpdateRoleApisById)
-		router.DELETE("/delete/batch", role.BatchDeleteRoleByIds)
+		router.GET("/list", roleApi.GetRoles)
+		router.POST("/create", roleApi.CreateRole)
+		router.PATCH("/update/:roleId", roleApi.UpdateRoleById)
+		router.GET("/menus/get/:roleId", roleApi.GetRoleMenusById)
+		router.PATCH("/menus/update/:roleId", roleApi.UpdateRoleMenusById)
+		router.GET("/apis/get/:roleId", roleApi.GetRoleApisById)
+		router.PATCH("/apis/update/:roleId", roleApi.UpdateRoleApisById)
+		router.DELETE("/delete/batch", roleApi.BatchDeleteRoleByIds)
 	}
 	return r
 }

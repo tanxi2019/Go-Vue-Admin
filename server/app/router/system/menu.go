@@ -9,20 +9,20 @@ import (
 )
 
 func InitMenuRouter(r *gin.RouterGroup) gin.IRouter {
-	menu := system.NewMenuMenuApi()
+	menuApi := system.NewMenuMenuApi()
 	router := r.Group("/menu")
 	// 开启jwt认证中间件
 	router.Use(global.AuthMiddleware.MiddlewareFunc())
 	// 开启casbin鉴权中间件
 	router.Use(middleware.CasbinMiddleware())
 	{
-		router.GET("/tree", menu.GetMenuTree)
-		router.GET("/list", menu.GetMenus)
-		router.POST("/create", menu.CreateMenu)
-		router.PATCH("/update/:menuId", menu.UpdateMenuById)
-		router.DELETE("/delete/batch", menu.BatchDeleteMenuByIds)
-		router.GET("/access/list/:userId", menu.GetUserMenusByUserId)
-		router.GET("/access/tree/:userId", menu.GetUserMenuTreeByUserId)
+		router.GET("/tree", menuApi.GetMenuTree)
+		router.GET("/list", menuApi.GetMenus)
+		router.POST("/create", menuApi.CreateMenu)
+		router.PATCH("/update/:menuId", menuApi.UpdateMenuById)
+		router.DELETE("/delete/batch", menuApi.BatchDeleteMenuByIds)
+		router.GET("/access/list/:userId", menuApi.GetUserMenusByUserId)
+		router.GET("/access/tree/:userId", menuApi.GetUserMenuTreeByUserId)
 	}
 
 	return r

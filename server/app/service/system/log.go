@@ -69,7 +69,6 @@ func (l Log) BatchDeleteOperationLogByIds(ids []uint) error {
 func (l Log) SaveOperationLogChannel(olc <-chan *system.OperationLog) {
 	// 只会在线程开启的时候执行一次
 	Logs := make([]system.OperationLog, 0)
-
 	// 一直执行--收到olc就会执行
 	for log := range olc {
 		Logs = append(Logs, *log)

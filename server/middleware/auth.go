@@ -80,8 +80,8 @@ func login(c *gin.Context) (interface{}, error) {
 		return "", err
 	}
 	// 密码校验
-	userDao := service.NewUserService()
-	user, err := userDao.Login(&req)
+	UserService := service.NewUserService()
+	user, err := UserService.Login(&req)
 	if err != nil {
 		return nil, err
 	}

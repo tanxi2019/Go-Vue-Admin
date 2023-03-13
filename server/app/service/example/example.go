@@ -2,9 +2,9 @@ package example
 
 import (
 	"github.com/go-redis/redis/v8"
+	"server/app/cache"
 	"server/app/model/example"
 	"server/app/model/example/reqo"
-	"server/cache"
 	"server/global"
 	"strconv"
 	"time"
