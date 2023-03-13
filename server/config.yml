@@ -30,11 +30,11 @@ mysql:
   # 用户名
   username: root
   # 密码
-  password: 123456
+  password: tanxi82694
   # 数据库名
-  database: gin-admin
+  database: gin-vue-admin
   # 主机地址 182.61.133.217
-  host: localhost
+  host: 182.61.133.217
   # 端口
   port: 3306
   # 连接字符串参数
@@ -48,11 +48,11 @@ mysql:
 
 redis:
     # 密码 123456
-    password:
+    password: 123456
     # 数据库名
     database: 0
     # 主机地址端口 182.61.133.217
-    addr: localhost:6379
+    addr: 182.61.133.217:6379
 
 
 # casbin配置
