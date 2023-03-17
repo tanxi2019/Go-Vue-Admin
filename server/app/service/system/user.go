@@ -3,9 +3,9 @@ package system
 import (
 	"errors"
 	"fmt"
-	redis "server/app/cache"
 	"server/app/model/system"
 	"server/app/model/system/reqo"
+	redis "server/cache"
 	"server/global"
 	"server/pkg/bcrypt"
 	"strings"

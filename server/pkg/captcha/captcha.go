@@ -2,10 +2,10 @@ package captcha
 
 import (
 	"github.com/mojocn/base64Captcha"
-	"server/app/cache"
+	"server/cache"
 )
 
-//CaptchaReq
+// CaptchaReq
 type CaptchaReq struct {
 	ImgHeight int `json:"imgHeight"`
 	ImgWidth  int `json:"imgWidth"`

@@ -1,7 +1,7 @@
 package system
 
 import (
-	"server/app/api/system"
+	"server/app/api/v1/system"
 	"server/global"
 	"server/middleware"
 

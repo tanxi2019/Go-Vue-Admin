@@ -101,7 +101,7 @@ func (ds DictApiService) PutDict(c *gin.Context) {
 	return
 }
 
-// DeleteExample 删除
+// DeleteDict  删除
 func (ds DictApiService) DeleteDict(c *gin.Context) {
 	dictId := new(reqo.DictId)
 	if err := c.ShouldBind(&dictId); err != nil {
@@ -121,7 +121,7 @@ func (ds DictApiService) DeleteDict(c *gin.Context) {
 	return
 }
 
-// DeleteExampleAll 批量删除
+// DeleteDictAll  批量删除
 func (ds DictApiService) DeleteDictAll(c *gin.Context) {
 	dictIds := new(reqo.DictIds)
 	// 参数绑定

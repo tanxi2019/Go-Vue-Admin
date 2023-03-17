@@ -2,7 +2,7 @@ package system
 
 import (
 	"github.com/gin-gonic/gin"
-	"server/app/api/system"
+	"server/app/api/v1/system"
 )
 
 // InitUploadRouter 用户案例模块

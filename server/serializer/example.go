@@ -1,8 +1,8 @@
 package serializer
 
 import (
-	"server/app/cache"
 	"server/app/model/example"
+	"server/cache"
 	"time"
 )
 

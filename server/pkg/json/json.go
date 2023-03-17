@@ -6,7 +6,7 @@ import (
 	"fmt"
 )
 
-// 结构体转为json
+// Struct2Json 结构体转为json
 func Struct2Json(obj interface{}) (str string, err error) {
 	bt, err := json.Marshal(obj)
 	if err != nil {
@@ -15,7 +15,7 @@ func Struct2Json(obj interface{}) (str string, err error) {
 	return string(bt), nil
 }
 
-// json转为结构体
+// Json2Struct json转为结构体
 func Json2Struct(str string, obj interface{}) error {
 	// 将json转为结构体
 	err := json.Unmarshal([]byte(str), obj)
@@ -25,7 +25,7 @@ func Json2Struct(str string, obj interface{}) error {
 	return nil
 }
 
-// json interface转为结构体
+// JsonI2Struct json interface转为结构体
 func JsonI2Struct(str interface{}, obj interface{}) error {
 	JsonStr := str.(string)
 	err := Json2Struct(JsonStr, obj)

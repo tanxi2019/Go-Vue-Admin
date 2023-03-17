@@ -3,10 +3,10 @@ package example
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"server/app/cache"
 	model "server/app/model/example"
 	"server/app/model/example/reqo"
 	service "server/app/service/example"
+	"server/cache"
 	"server/pkg/code"
 	"server/pkg/response"
 	"server/pkg/validator"

@@ -35,6 +35,7 @@ func (cs CaptchaApiService) Captcha(c *gin.Context) {
 	data, err := captcha.GenCaptcha(CaptchaReq)
 	if err != nil {
 		response.Error(c, http.StatusBadRequest, code.ServerErr, err.Error(), nil)
+		return
 	}
 	response.Success(c, code.SUCCESS, code.GetErrMsg(code.SUCCESS), data)
 	return

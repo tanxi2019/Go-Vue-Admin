@@ -2,7 +2,7 @@ package example
 
 import (
 	"github.com/gin-gonic/gin"
-	"server/app/api/example"
+	"server/app/api/v1/example"
 	"server/global"
 	"server/middleware"
 )
