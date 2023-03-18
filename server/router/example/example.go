@@ -26,6 +26,7 @@ func InitExampleRouter(r *gin.RouterGroup) gin.IRouter {
 		router.DELETE("/remove", exampleApi.DeleteExampleAll) // 全部删除
 		router.GET("/rank", exampleApi.GetExampleRank)        // 排行榜
 		router.POST("/vote", exampleApi.GetExampleVote)       // 投票
+		router.GET("/alipay", exampleApi.AliPay)              // 投票
 	}
 
 	return r

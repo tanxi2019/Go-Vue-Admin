@@ -6,16 +6,16 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"server/app/router"
 	"server/app/service/system"
 	"server/config"
 	"server/global"
 	"server/middleware"
+	"server/router"
 	"syscall"
 	"time"
 )
 
-//InitializeRun
+// InitializeRun
 func InitRun() {
 	// 操作日志中间件处理日志时没有将日志发送到rabbitmq或者kafka中, 而是发送到了channel中
 	// 这里开启3个goroutine处理channel将日志记录到数据库

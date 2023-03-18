@@ -2,7 +2,10 @@ package example
 
 import (
 	"github.com/gin-gonic/gin"
+	"github.com/go-pay/gopay"
+	"github.com/go-pay/gopay/alipay"
 	"net/http"
+	"os"
 	model "server/app/model/example"
 	"server/app/model/example/reqo"
 	service "server/app/service/example"
@@ -13,6 +16,8 @@ import (
 	"server/serializer"
 	"sort"
 	"strconv"
+	"strings"
+	"time"
 )
 
 // ExampleService
@@ -25,6 +30,7 @@ type ExampleService interface {
 	DeleteExampleAll(c *gin.Context) // 批量删除
 	GetExampleRank(c *gin.Context)   // 排行榜
 	GetExampleVote(c *gin.Context)   // 投票
+	AliPay(c *gin.Context)           // 支付宝
 }
 
 // ExampleApiService 服务层数据处理
@@ -318,4 +324,63 @@ func (es ExampleApiService) Sum(arr []float64, ch chan float64) {
 	}
 	// 向管道中传输数据
 	ch <- result
+}
+
+// @Tags Example
+// @Summary  支付宝支付接口
+// @Security ApiKeyAuth
+// @accept application/json
+// @Produce application/json
+// @Success 200 {object} response.Response{data,msg=string}
+// @Router /api/example/alipay [get]
+func (es ExampleApiService) AliPay(c *gin.Context) {
+	// 公钥
+	aliPublicKey, _ := os.ReadFile("./config/alipay/publicKey.txt")
+	// 私钥
+	aliPrivateKey, _ := os.ReadFile("./config/alipay/privateKey.txt")
+	// appid
+	appId := "2021000117699350"
+
+	client, err := alipay.NewClient(appId, string(aliPrivateKey), false)
+	if err != nil {
+		response.Error(c, http.StatusBadRequest, code.ServerErr, err.Error(), nil)
+		return
+	}
+	// 自定义配置http请求接收返回结果body大小，默认 10MB
+	client.SetBodySize(10) // 没有特殊需求，可忽略此配置
+
+	// 打开Debug开关，输出日志，默认关闭
+	//client.DebugSwitch = gopay.DebugOn
+
+	// 设置支付宝请求 公共参数
+	// 注意：具体设置哪些参数，根据不同的方法而不同，此处列举出所有设置参数
+	client.SetLocation(alipay.LocationShanghai). // 设置时区，不设置或出错均为默认服务器时间
+							SetCharset(alipay.UTF8).               // 设置字符编码，不设置默认 utf-8
+							SetSignType(alipay.RSA2).              // 设置签名类型，不设置默认 RSA2
+							SetReturnUrl("https://www.baidu.com"). // 设置返回URL
+							SetNotifyUrl("https://www.baidu.com")  // 设置异步通知URL
+	//SetAppAuthToken("")               // 设置第三方应用授权
+	// 公钥验签
+	client.AutoVerifySign([]byte(aliPublicKey))
+	// 订单号
+	trade := strings.Replace(time.Now().Format("2006 01 02 15 04 05"), " ", "", -1)
+	// 初始化结构体
+	bm := make(gopay.BodyMap)
+	bm.Set("subject", "电脑网站测试支付")                    // 商品名称
+	bm.Set("out_trade_no", trade)                    // 订单号
+	bm.Set("total_amount", "100.00")                 // 金额
+	bm.Set("product_code", "FAST_INSTANT_TRADE_PAY") // FAST_INSTANT_TRADE_PAY电脑支付 QUICK_WAP_WAY 手机支付
+	// 返回支付链接地址
+	payUrl, err := client.TradePagePay(c, bm)
+	// 失败返回
+	if err != nil {
+		response.Error(c, http.StatusBadRequest, code.ServerErr, err.Error(), nil)
+		return
+	}
+	// 成功返沪
+	response.Success(c, code.SUCCESS, code.GetErrMsg(code.SUCCESS), map[string]interface{}{
+		"url": payUrl,
+	})
+	return
+
 }

@@ -41,7 +41,7 @@
       >
         <el-table-column show-overflow-tooltip sortable prop="username" label="用户名" />
         <el-table-column show-overflow-tooltip sortable prop="nickname" label="昵称" />
-        <el-table-column show-overflow-tooltip sortable prop="status" label="状态" align="center">
+        <el-table-column show-overflow-tooltip sortable prop="status" label="状态" >
           <template slot-scope="scope">
             <el-tag size="small" :type="scope.row.status === 1 ? 'success':'danger'" disable-transitions>{{ scope.row.status === 1 ? '正常':'禁用' }}</el-tag>
           </template>
@@ -49,7 +49,7 @@
         <el-table-column show-overflow-tooltip sortable prop="mobile" label="手机号" />
         <el-table-column show-overflow-tooltip sortable prop="creator" label="创建人" />
         <el-table-column show-overflow-tooltip sortable prop="introduction" label="说明" />
-        <el-table-column label="操作" align="center" width="300px">
+        <el-table-column label="操作" align="center" width="250px">
           <template slot-scope="scope">
             <!--
             @author:风很大

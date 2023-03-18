@@ -74,6 +74,27 @@ paths:
       summary: 用户登录
       tags:
       - Base
+  /api/example/alipay:
+    get:
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/response.Response'
+            - properties:
+                msg:
+                  type: string
+              type: object
+      security:
+      - ApiKeyAuth: []
+      summary: 支付宝支付接口
+      tags:
+      - Example
   /api/example/create:
     post:
       consumes:

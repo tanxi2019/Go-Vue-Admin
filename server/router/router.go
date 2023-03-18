@@ -3,13 +3,13 @@ package router
 import (
 	"fmt"
 	ginSwagger "github.com/swaggo/gin-swagger"
-	"server/app/router/example"
-	"server/app/router/system"
 	"server/config"
 	_ "server/docs"
 	"server/global"
 	"server/middleware"
 	"server/pkg/socket"
+	"server/router/example"
+	system2 "server/router/system"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -59,15 +59,15 @@ func GroupRouter(r *gin.Engine) {
 	// 路由分组
 	apiGroup := r.Group("/" + config.Conf.System.UrlPathPrefix)
 	// 注册路由
-	system.InitBaseRouter(apiGroup)         // 注册基础路由, 不需要jwt认证中间件,不需要casbin中间件
-	system.InitUserRouter(apiGroup)         // 注册用户路由, jwt认证中间件,casbin鉴权中间件
-	system.InitRoleRouter(apiGroup)         // 注册角色路由, jwt认证中间件,casbin鉴权中间件
-	system.InitMenuRouter(apiGroup)         // 注册菜单路由, jwt认证中间件,casbin鉴权中间件
-	system.InitApiRouter(apiGroup)          // 注册接口路由, jwt认证中间件,casbin鉴权中间件
-	system.InitOperationLogRouter(apiGroup) // 注册日志路由, jwt认证中间件,casbin鉴权中间件
-	system.InitDictRouter(apiGroup)         // 注册字典路由, jwt认证中间件,casbin鉴权中间件
-	system.InitDictDetailsRouter(apiGroup)  // 注册字典详情路由, jwt认证中间件,casbin鉴权中间件
-	system.InitUploadRouter(apiGroup)       // 文件上传, jwt认证中间件,casbin鉴权中间件
-	example.InitExampleRouter(apiGroup)     // 注册基础路由, jwt认证中间件,要casbin中间件
+	system2.InitBaseRouter(apiGroup)         // 注册基础路由, 不需要jwt认证中间件,不需要casbin中间件
+	system2.InitUserRouter(apiGroup)         // 注册用户路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitRoleRouter(apiGroup)         // 注册角色路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitMenuRouter(apiGroup)         // 注册菜单路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitApiRouter(apiGroup)          // 注册接口路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitOperationLogRouter(apiGroup) // 注册日志路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitDictRouter(apiGroup)         // 注册字典路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitDictDetailsRouter(apiGroup)  // 注册字典详情路由, jwt认证中间件,casbin鉴权中间件
+	system2.InitUploadRouter(apiGroup)       // 文件上传, jwt认证中间件,casbin鉴权中间件
+	example.InitExampleRouter(apiGroup)      // 注册基础路由, jwt认证中间件,要casbin中间件
 
 }

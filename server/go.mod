@@ -8,6 +8,7 @@ require (
 	github.com/casbin/gorm-adapter/v3 v3.4.6
 	github.com/fsnotify/fsnotify v1.5.1
 	github.com/gin-gonic/gin v1.8.2
+	github.com/go-pay/gopay v1.5.91
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.0
 	github.com/go-playground/validator/v10 v10.11.1
@@ -24,8 +25,8 @@ require (
 	github.com/swaggo/swag v1.8.10
 	github.com/thoas/go-funk v0.9.1
 	go.uber.org/zap v1.19.1
-	golang.org/x/crypto v0.5.0
-	golang.org/x/text v0.6.0
+	golang.org/x/crypto v0.7.0
+	golang.org/x/text v0.8.0
 	gopkg.in/natefinch/lumberjack.v2 v2.0.0
 	gorm.io/driver/mysql v1.2.1
 	gorm.io/gorm v1.22.4
@@ -89,10 +90,10 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	golang.org/x/image v0.0.0-20210628002857-a66eb6448b8d // indirect
-	golang.org/x/net v0.5.0 // indirect
+	golang.org/x/net v0.8.0 // indirect
 	golang.org/x/sync v0.1.0 // indirect
-	golang.org/x/sys v0.5.0 // indirect
-	golang.org/x/tools v0.5.0 // indirect
+	golang.org/x/sys v0.6.0 // indirect
+	golang.org/x/tools v0.6.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/ini.v1 v1.66.2 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect

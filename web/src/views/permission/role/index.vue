@@ -38,7 +38,7 @@
         <el-table-column show-overflow-tooltip sortable prop="name" label="角色名称" />
         <el-table-column show-overflow-tooltip sortable prop="keyword" label="关键字" />
         <el-table-column show-overflow-tooltip sortable prop="sort" label="等级" />
-        <el-table-column show-overflow-tooltip sortable prop="status" label="角色状态" align="center">
+        <el-table-column show-overflow-tooltip sortable prop="status" label="角色状态" >
           <template slot-scope="scope">
             <el-tag size="small" :type="scope.row.status === 1 ? 'success':'danger'" disable-transitions>{{ scope.row.status === 1 ? '正常':'禁用' }}</el-tag>
           </template>
@@ -84,7 +84,7 @@
               <el-option label="禁用" :value="2" />
             </el-select>
           </el-form-item>
-          <el-form-item label="等级(1最高)" prop="sort">
+          <el-form-item label="等级" prop="sort">
             <el-input-number v-model.number="dialogFormData.sort" controls-position="right" :min="1" :max="999" />
           </el-form-item>
           <el-form-item label="说明" prop="desc">
@@ -289,7 +289,7 @@ export default {
         name: '',
         keyword: '',
         status: 1,
-        sort: 999,
+        sort: 1,
         desc: ''
       },
       dialogFormRules: {
